@@ -1,0 +1,11 @@
+<div class="container col-sm-6 mx-auto align-item-center">
+    <div>
+        <h3 class="text-center m-t-10">Recent Blogs here...</h3>
+    </div>
+    <div *ngFor="let post of posts" class="card mb-3 bg-secondary text-white p-3">
+    <p class="text-bold">{{post.title}}</p>
+    <p class="text-bold">{{post.author}}</p>
+    <p class="text-bold">{{post.content | slice: 0:10}} <span><a [routerLink]="
+        ['/posts', post.id]" class="text-white text-bold">Read more...</a></span></p>
+    </div>
+</div>

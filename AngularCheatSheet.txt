@@ -1,0 +1,49 @@
+1. npm install
+npm install -g @angular/cli
+2. new folder inside cloned repo
+ng new blog-system 
+3. go in to the new folder
+4. open VC
+code .
+5. Run
+ng s -o
+6. Erase read me
+7. Add bootstrap to index.html
+8. Add components
+ng g c components/home
+
+9. Make service
+ng g s service/post
+10. Configure routes app-routing.module.ts
+11. Install JSON-Server for dummy data
+npm i -g json-server
+12. Run Json server
+json-server --watch db.json
+
+13 Import HttpClientModule in App.module.ts
+14 Inject HttpClient in Service file
+15. Set Base Url for Blog Application
+16 Write Method of Create, Get Edit, Veiw and Delete Data
+
+17. Design header using Css Part
+	1. Add HTML code
+	2. Add TS code
+18. Make Reactive form for Add Post Using Bootstrap Form
+	1. Add HTML
+	2. Add TS code
+
+
+19. Display Blog Data and Design
+	Run Json Server
+	Add TS code for Subscribe DAta
+	Add HTML code For render data
+
+20. Display Blog Details
+	Add ts code
+	Add HTML code
+
+
+ADMIN
+
+
+

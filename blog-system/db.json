@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Blog System",
+      "content":"This my blog system",
+      "author": "Kaveesha Walalawela"
+    },
+    {
+      "id": 2,
+      "title": "Test 1",
+      "content":"This is a test",
+      "author": "Kaveesha Walalawela"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
