@@ -11,6 +11,10 @@ import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { DetailsComponent } from './components/details/details.component';
 import { DetailsPostComponent } from './components/details-post/details-post.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     EditPostComponent,
     DetailsComponent,
-    DetailsPostComponent
+    DetailsPostComponent,
+    LoginComponent,
+    SignupComponent,
+    DashboardComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,

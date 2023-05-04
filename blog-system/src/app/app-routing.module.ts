@@ -5,6 +5,7 @@ import { AboutComponent } from './components/about/about.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { DetailsPostComponent } from './components/details-post/details-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
     },
     {
       path:'editpost/:id', component:EditPostComponent
+    },
+    {
+      path:'login', component:LoginComponent
     }
   ];
 
