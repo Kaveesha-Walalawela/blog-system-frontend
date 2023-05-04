@@ -3,14 +3,20 @@
     {
       "id": 1,
       "title": "Blog System",
-      "content":"This my blog system",
+      "content": "This my blog system",
       "author": "Kaveesha Walalawela"
     },
     {
       "id": 2,
       "title": "Test 1",
-      "content":"This is a test",
+      "content": "This is a test",
       "author": "Kaveesha Walalawela"
+    },
+    {
+      "title": "jhjkh",
+      "author": "jl;k';",
+      "content": "hgkjlj",
+      "id": 3
     }
   ],
   "comments": [
