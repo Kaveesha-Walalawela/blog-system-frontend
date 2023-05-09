@@ -5,3 +5,43 @@
     border: 1px solid gray;
     border-radius: 10px;
 }
+.fullcontainer {
+    background-color: #271b3f;
+    color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.fullcontainer input[type="text"],
+.fullcontainer textarea {
+  margin: 10px 0;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+}
+.fullcontainer input[type="text"]::placeholder,
+.fullcontainer textarea::placeholder {
+  color: #ddd;
+}
+.fullcontainer input[type="submit"] {
+  background-color: #573b8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.fullcontainer input[type="submit"]:hover {
+  background-color: #4a2d70;
+}
+.fullcontainer label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+    

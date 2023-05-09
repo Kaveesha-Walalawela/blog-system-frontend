@@ -15,13 +15,17 @@ export class LoginComponent implements OnInit {
     email: '',
     password: ''
   };
-  LoginObj: any ={
+  loginObj: any = {
     userName: '',
     password: ''
   };
-  constructor(){}
+  constructor() { }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
+    const localData = localStorage.getItem('signUpUsers');
+    if(localData != null) {
+      this.signupUsers = JSON.parse(localData);
+    }
   }
   onSignUp(){
     this.signupUsers.push(this.signupObj);
@@ -32,7 +36,14 @@ export class LoginComponent implements OnInit {
       password: ''
   };
   }
-  onLogin(){
+  onLogin() {
+    debugger
+    const isUserExist = this.signupUsers.find(m => m.userName == this.loginObj.userName && m.password == this.loginObj.password);
+    if(isUserExist != undefined) {
+      alert('User Logged in Successfully');
+    } else {
+      alert('Wrong Credentials');
+    }
   }
   // LoginForm(login:any){
   //   alert("Welcome to Blog")
