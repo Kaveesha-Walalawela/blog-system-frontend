@@ -6,7 +6,7 @@ import { AddPostComponent } from './components/add-post/add-post.component';
 import { DetailsPostComponent } from './components/details-post/details-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
+// import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
   {
     path:'home', component:HomeComponent
@@ -29,9 +29,10 @@ const routes: Routes = [
     {
       redirectTo:'', path:'login', pathMatch:"full"
     },
-    {
-      path:'signup', component:SignupComponent
-    },
+    // {
+    //   path:'signup', component:SignupComponent
+    // }
+    // {path: 'dashboard', component:UserDashboardComponent}
   ];
 
 @NgModule({

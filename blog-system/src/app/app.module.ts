@@ -10,11 +10,11 @@ import { HeaderComponent } from './header/header.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { DetailsComponent } from './components/details/details.component';
 import { DetailsPostComponent } from './components/details-post/details-post.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+// import { SignupComponent } from './components/signup/signup.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,15 +27,16 @@ import { PostsComponent } from './components/posts/posts.component';
     DetailsComponent,
     DetailsPostComponent,
     LoginComponent,
-    SignupComponent,
-    DashboardComponent,
+    // SignupComponent,
     PostsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
