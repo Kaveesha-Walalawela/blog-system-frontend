@@ -15,6 +15,9 @@ import { LoginComponent } from './components/login/login.component';
 // import { SignupComponent } from './components/signup/signup.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { RouterModule } from '@angular/router';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { RouterModule } from '@angular/router';
     DetailsPostComponent,
     LoginComponent,
     // SignupComponent,
-    PostsComponent
+    PostsComponent,
+    AdminHomeComponent,
+    AdminHeaderComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

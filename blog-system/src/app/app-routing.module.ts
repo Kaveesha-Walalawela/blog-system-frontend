@@ -6,6 +6,8 @@ import { AddPostComponent } from './components/add-post/add-post.component';
 import { DetailsPostComponent } from './components/details-post/details-post.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { LoginComponent } from './components/login/login.component';
+import { AdminHomeComponent } from './components/admin-home/admin-home.component';
+import { UsersComponent } from './components/users/users.component';
 // import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
   {
@@ -29,6 +31,13 @@ const routes: Routes = [
     {
       redirectTo:'', path:'login', pathMatch:"full"
     },
+    {
+      path:'admin-home', component:AdminHomeComponent
+    },
+    {
+      path:'users', component:UsersComponent
+    },
+
     // {
     //   path:'signup', component:SignupComponent
     // }
