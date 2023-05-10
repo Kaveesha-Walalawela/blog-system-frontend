@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +20,8 @@ export class LoginComponent implements OnInit {
     userName: '',
     password: ''
   };
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     const localData = localStorage.getItem('signUpUsers');
@@ -28,6 +29,7 @@ export class LoginComponent implements OnInit {
       this.signupUsers = JSON.parse(localData);
     }
   }
+
   onSignUp(){
     if (this.signupObj.password !== this.signupObj.confirmPassword) {
       alert('Passwords do not match');
@@ -41,13 +43,19 @@ export class LoginComponent implements OnInit {
       email: '',
       password: '',
       confirmPassword:''
-  };
+    };
+    debugger
+    const isUserExist = this.signupUsers.find(m => m.userName == this.loginObj.userName && m.password == this.loginObj.password);
+    if(isUserExist != undefined) {
+      alert('Account Created Successfully. Please login !');
+    } 
   }
+
   onLogin() {
     debugger
     const isUserExist = this.signupUsers.find(m => m.userName == this.loginObj.userName && m.password == this.loginObj.password);
     if(isUserExist != undefined) {
-      alert('User Logged in Successfully');
+      this.router.navigate(['/home']);
     } else {
       alert('Wrong Credentials');
     }
