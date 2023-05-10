@@ -13,7 +13,8 @@ export class LoginComponent implements OnInit {
   signupObj:any = {
     userName: '',
     email: '',
-    password: ''
+    password: '',
+    confirmPassword:''
   };
   loginObj: any = {
     userName: '',
@@ -28,12 +29,18 @@ export class LoginComponent implements OnInit {
     }
   }
   onSignUp(){
+    if (this.signupObj.password !== this.signupObj.confirmPassword) {
+      alert('Passwords do not match');
+      return;
+    }
+
     this.signupUsers.push(this.signupObj);
     localStorage.setItem('signUpUsers',JSON.stringify(this.signupUsers));
     this.signupObj = {
       userName: '',
       email: '',
-      password: ''
+      password: '',
+      confirmPassword:''
   };
   }
   onLogin() {
@@ -45,9 +52,4 @@ export class LoginComponent implements OnInit {
       alert('Wrong Credentials');
     }
   }
-  // LoginForm(login:any){
-  //   alert("Welcome to Blog")
-
-  // }
-
 }

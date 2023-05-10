@@ -1,4 +1,3 @@
-<app-header></app-header>
 <div class="topContainer">
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
@@ -9,6 +8,7 @@
 					<input type="text" name="txt" placeholder="User name" required="" [(ngModel)]="signupObj.userName">
 					<input type="email" name="email" placeholder="Email" required="" [(ngModel)]="signupObj.email">
 					<input type="password" name="Password" placeholder="Password" required="" [(ngModel)]="signupObj.password">
+					<input type="password" name="confirmPassword" placeholder="Confirm Password" required="" [(ngModel)]="signupObj.confirmPassword">
 					<button (click)="onSignUp()">Sign up</button>
 				</form>
 			</div>
