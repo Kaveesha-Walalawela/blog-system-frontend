@@ -12,7 +12,6 @@ import { DetailsComponent } from './components/details/details.component';
 import { DetailsPostComponent } from './components/details-post/details-post.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
-// import { SignupComponent } from './components/signup/signup.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { RouterModule } from '@angular/router';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
@@ -30,7 +29,6 @@ import { UsersComponent } from './components/users/users.component';
     DetailsComponent,
     DetailsPostComponent,
     LoginComponent,
-    // SignupComponent,
     PostsComponent,
     AdminHomeComponent,
     AdminHeaderComponent,

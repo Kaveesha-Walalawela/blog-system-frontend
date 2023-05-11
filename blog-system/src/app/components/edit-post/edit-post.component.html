@@ -1,2 +1,19 @@
-<app-header></app-header>
-<p>edit-post works!</p>
+<div class="container col-sm-8 mx-auto align-item-center">
+    <h3 class="text-center m-t-10">Edit Post</h3>
+    <form [formGroup]="editPost" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Title:</label>
+        <input type="text" class="form-control" formControlName="title">
+      </div>
+      <div class="form-group">
+        <label>Author:</label>
+        <input type="text" class="form-control" formControlName="author">
+      </div>
+      <div class="form-group">
+        <label>Content:</label>
+        <textarea class="form-control" formControlName="content"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Update Post</button>
+    </form>
+  </div>
+  

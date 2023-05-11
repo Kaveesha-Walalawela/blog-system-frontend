@@ -15,11 +15,12 @@ ng g c components/home
 9. Make service
 ng g s service/post
 10. Configure routes app-routing.module.ts
+=======================================
 11. Install JSON-Server for dummy data
 npm i -g json-server
 12. Run Json server
 json-server --watch db.json
-
+=======================================
 13 Import HttpClientModule in App.module.ts
 14 Inject HttpClient in Service file
 15. Set Base Url for Blog Application

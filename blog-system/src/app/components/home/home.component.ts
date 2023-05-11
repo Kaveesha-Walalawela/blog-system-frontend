@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from 'src/app/service/post.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { PostService } from 'src/app/service/post.service';
 export class HomeComponent implements OnInit {
   posts!:any;
 
-  constructor(private postService:PostService){}
+  constructor(private postService:PostService, private router: Router){}
 
   ngOnInit(): void {
     this.postService.getAllPosts().subscribe((data)=>{
@@ -22,8 +23,9 @@ export class HomeComponent implements OnInit {
   }
 
   editPost(post: any) {
-    // Open a modal or dialog box to allow the user to edit the content of the post
-  }
+    this.router.navigate(['/editpost', post.id]);
+}
+
 
   deletePost(post: any) {
     this.postService.deletePost(post.id).subscribe(() => {
