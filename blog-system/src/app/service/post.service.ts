@@ -17,15 +17,15 @@ export class PostService {
 
   }//Get post by ID
   getPostById(id:any){
-    return this.http.get('this.baseUrl/${id}')
+    return this.http.get(`${this.baseUrl}/${id}`)
   }
   //Update post
   updatePost(id:any, data:any){
-    return this.http.get('this.baseUrl/${id}')
+    return this.http.put(`${this.baseUrl}/${id}`, data)
   }
   //Delete post
   deletePost(id:any){
-    return this.http.delete('this.baseUrl/${id}')
+    return this.http.delete(`${this.baseUrl}/${id}`)
   }
   
 }

@@ -1,6 +1,7 @@
 .fullcontainer{
-    max-width: 500px;
-    margin-left: 400px;
+    max-width: 600px;
+    margin-left: 25%;
+    margin-right: 20%;
     margin-top: 10px;
     border: 1px solid gray;
     border-radius: 10px;
@@ -44,4 +45,3 @@
     font-size: 18px;
     font-weight: bold;
   }
-    

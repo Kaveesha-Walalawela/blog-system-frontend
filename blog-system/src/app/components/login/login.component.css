@@ -1,3 +1,4 @@
+
 body{
 	margin: 0;
 	padding: 0;
@@ -9,6 +10,9 @@ body{
 	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
 }
 .main{
+	margin-left: 36%;
+    margin-right: 50%;
+    margin-top: 30px;
 	width: 350px;
 	height: 500px;
 	background: #271b3f;

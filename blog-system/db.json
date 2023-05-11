@@ -1,49 +1,25 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "Blog System",
-      "content": "This my blog system",
-      "author": "Kaveesha Walalawela"
+      "title": "Plastic Pollution ",
+      "author": "aaaaaaaaaaaa",
+      "content": "Abstract\nWaste lubricating oil is considered to be a hazardous waste and has tremendous impact on human health and environment. The present review elaborates on the lubricant demand and market share. Further the work elaborates on the various conventional techniques of re-refining of waste lubricating oil like acid clay, vacuum distillation, hydrotreating, solvent extraction, extraction flocculation, etc. The design modification of the conventional techniques along with the alteration in the process variables is also discussed to upgrade the quality of the product. The upliftment in the technology by incorporation of various modern techniques like Vaxon, Snamprogetti, Sotulube, Interline, Hy lube, etc., has thrown a wider aspect on high productivity and long-term economic aspect. Emphasis has been given to combined modern techniques MRD solvent extraction process, Hy lube, Ecohuile, Revivoil etc., to improvise the product quality where single method of re-refining may not give standard specification. Effect of various parameters like catalyst, catalyst activity, solvent-to-waste oil ratio, flocculant dosage, refining temperature, solvent class, various adsorbents, flocculant on metal content removal, % yield, % oil loss, % sludge removal has been thoroughly visualised. The effect of different refining techniques on the oil quality (flash point, pour point, viscosity, metal content, TAN, etc.), chemical composition of refined lubricating oil (by GC–MS, FTIR, TGA, etc.) are elaborately compared so as to suggest the best possible refining process. This critical review will help the re-refining industries for better interpretation of the further scope of applicability.",
+      "id": 7
     },
     {
-      "id": 2,
-      "title": "Test 1",
-      "content": "This is a test",
-      "author": "Kaveesha Walalawela"
+      "title": "Apple Tart recipe ",
+      "author": "kkkkkk",
+      "content": "FOR THE FILLING\n5 apples, peeled, cored, and sliced\n1/3 c. packed brown sugar\nJuice of 1/2 lemon\n1 tsp. ground cinnamon\n1 tsp. pure vanilla extract\nFOR THE CRUST\n1 1/3 c. all-purpose flour\n1/4 c. packed brown sugar\n1/2 tsp. kosher salt\n1/4 tsp. ground cinnamon\n10 tbsp. butter, melted\n1 tbsp. granulated sugar\n2 tbsp. butter, cut into small cubes\nMelted apricot preserves\n\nDirections\nStep 1\nPreheat oven to 350°. In a large bowl, toss apples, brown sugar, lemon juice, cinnamon, vanilla, and salt together. \nStep 2\nIn a large bowl, whisk together flour, sugar, salt, and cinnamon. Add melted butter and stir until dough forms. Press mixture into a 10” or 11” tart pan with a removable bottom, pressing until dough is smooth. \nStep 3\nArrange apples over crust, sprinkle with granulated sugar and dot top with butter. Bake until crust is golden and apples are tender, about 1 hour. \nStep 4\nBrush with melted apricot preserves and let cool slightly before slicing and serving.",
+      "id": 8
     },
     {
-      "title": "jhjkh",
-      "author": "jl;k';",
-      "content": "hgkjlj",
-      "id": 3
-    },
-    {
-      "title": "bbfbfdbb",
-      "author": "bffdvf",
-      "content": "fvfdvfdvfdvf",
-      "id": 4
-    },
-    {
-      "title": "",
-      "author": "hvhjkhbjnjnknkxnXklXklXMkxmklzMxlzkxmklzmxzkLmx",
-      "content": "",
-      "id": 5
-    },
-    {
-      "title": "dddddd",
-      "author": "ddddddddddd",
-      "content": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-      "id": 6
+      "title": "Micro SD",
+      "author": "dddddddd",
+      "content": "Memory cards act as electronic storage for your devices by storing digital media such as photos and videos. If you have a camera, camcorder, drone or mobile device, chances are you use a memory card.\n\nThe SD and microSD variants are most commonly used in smartphones and digital cameras. They fit into everything from your DSLR to your Nintendo Switch. However, not all cards are created equal – different devices require a different type of memory card.\n\nThe first thing to consider when choosing a memory card is figuring out what type of card your device requires, which can usually be found in the instruction manual or on the manufacturer’s website. This will usually indicate what SD standard the device requires. Both SD and microSD cards share the same standards: SD, SDHC, SDXC and SDUC, and microSD, microSDHC, microSDXC and microSDUC.\n\nThe two standards that are more popular today for both SD and microSD cards are SDHC and SDXC. The main difference between the SD standards is storage capacity. If you shoot 4K video, you’ll most likely need an SDXC card since it has a maximum capacity of 2TB, which is plenty for optimal video recording performance. Additionally, SDXC cards use the exFAT file system to support the large files that can be produced when recording video at high bitrates with cameras like Sony’s a7S III. In comparison, files are limited to 4GB in size with the FAT32 file system used by other card types.\n\nFor the average user, a 32GB or 64GB card is more than enough. A mid-sized card should be able to capture hundreds, or even thousands of photos and video clips.",
+      "id": 9
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }

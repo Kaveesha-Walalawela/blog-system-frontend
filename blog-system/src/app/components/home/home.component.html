@@ -9,6 +9,7 @@
     <p class="text-bold">{{post.author}}</p>
     <p class="text-bold">{{post.content | slice: 0:1000}} <span><a [routerLink]="
         ['/posts', post.id]" class="text-black text-bold">Read more...</a></span></p>
+    <button (click)="deletePost(post)">Delete</button>
     </div>
-</div>
+    </div>
 </div>
