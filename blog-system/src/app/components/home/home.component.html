@@ -1,16 +1,18 @@
 <app-header></app-header>
 <div class="maincontainer">
-    <div class="container col-sm-8 mx-auto align-item-center">
+  <div class="container col-sm-8 mx-auto align-item-center">
     <div>
-        <h3 class="text-center m-t-10">Recent Blogs here...</h3>
+      <h3 class="text-center m-t-10">Recent Blogs here...</h3>
     </div>
     <div *ngFor="let post of posts" class="card mb-3 bg-white text-black p-3">
-    <p class="text-bold">{{post.title}}</p>
-    <p class="text-bold">{{post.author}}</p>
-    <p class="text-bold">{{post.content | slice: 0:1000}} <span><a [routerLink]="
+      <p class="text-bold">{{post.title}}</p>
+      <p class="text-bold">{{post.author}}</p>
+      <p class="text-bold">{{post.content | slice: 0:1000}} <span><a [routerLink]="
         ['/posts', post.id]" class="text-black text-bold">Read more...</a></span></p>
-    <button class="btn btn-warning btn-sm" [routerLink]="['/editpost', post.id]">Edit</button>
-    <button (click)="deletePost(post)">Delete</button>
+      <div class="btn-container">
+        <button class="btn-edit" [routerLink]="['/editpost', post.id]">Edit</button>
+        <button class="btn-delete" (click)="deletePost(post)">Delete</button>
+      </div>
     </div>
-    </div>
+  </div>
 </div>
