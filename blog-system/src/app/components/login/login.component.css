@@ -95,3 +95,31 @@ button:hover{
 #chk:checked ~ .signup label{
 	transform: scale(.6);
 }
+
+.back-to-home {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	background-color: #271b3f;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	font-size: 1.5rem;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .back-to-home::before {
+	content: "\2190";
+	font-size: 1.2rem;
+	margin-right: 5px;
+  }
+  
+  .back-to-home:hover {
+	background-color: #573b8a;
+  }
+  
