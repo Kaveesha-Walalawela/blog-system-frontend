@@ -1,0 +1,10 @@
+<div *ngFor="let post of savedPosts" class="card mb-3 bg-white text-black p-3">
+    <p class="text-bold">{{post.title}}</p>
+    <p class="text-bold">{{post.author}}</p>
+    <p class="text-bold">{{post.content | slice: 0:1000}} <span><a [routerLink]="
+      ['/posts', post.id]" class="text-black text-bold">Read more...</a></span></p>
+    <div class="btn-container">
+      <button class="btn-delete" (click)="removeSavedPost(post)">Remove</button>
+    </div>
+  </div>
+  

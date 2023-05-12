@@ -36,4 +36,11 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  savePost(post: any) {
+    // Add the post to the list of saved posts
+    this.postService.addSavedPost(post);
+    // Navigate to the saved-posts page
+    this.router.navigate(['/saved-posts']);
+  }
+
 }

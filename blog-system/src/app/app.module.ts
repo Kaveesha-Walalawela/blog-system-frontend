@@ -17,6 +17,8 @@ import { RouterModule } from '@angular/router';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { UsersComponent } from './components/users/users.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { SavedPostsComponent } from './components/saved-posts/saved-posts.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { UsersComponent } from './components/users/users.component';
     PostsComponent,
     AdminHomeComponent,
     AdminHeaderComponent,
-    UsersComponent
+    UsersComponent,
+    UserProfileComponent,
+    SavedPostsComponent
   ],
   imports: [
     BrowserModule,

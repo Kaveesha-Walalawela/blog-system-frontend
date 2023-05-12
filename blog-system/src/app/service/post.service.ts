@@ -6,6 +6,10 @@ import { Injectable } from '@angular/core';
 })
 export class PostService {
   baseUrl="http://localhost:3000/posts"
+  savedPosts: any[] =[];
+  addSavedPost(post: any) {
+    this.savedPosts.push(post);
+  }
   constructor(private http:HttpClient) { }
   //Get ALL data
   getAllPosts(){
@@ -28,4 +32,21 @@ export class PostService {
     return this.http.delete(`${this.baseUrl}/${id}`)
   }
   
+//Save post
+savePost(post: any){
+  this.savedPosts.push(post);
+}
+
+//Get saved posts
+getSavedPosts(){
+  return this.savedPosts;
+}
+
+//Remove post from saved posts
+removeSavedPost(post: any){
+  const index = this.savedPosts.indexOf(post);
+  if(index >= 0){
+    this.savedPosts.splice(index, 1);
+  }
+} 
 }
