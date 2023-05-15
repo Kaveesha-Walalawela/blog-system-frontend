@@ -19,6 +19,7 @@ import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { UsersComponent } from './components/users/users.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { SavedPostsComponent } from './components/saved-posts/saved-posts.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -36,15 +37,17 @@ import { SavedPostsComponent } from './components/saved-posts/saved-posts.compon
     AdminHeaderComponent,
     UsersComponent,
     UserProfileComponent,
-    SavedPostsComponent
+    SavedPostsComponent,
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

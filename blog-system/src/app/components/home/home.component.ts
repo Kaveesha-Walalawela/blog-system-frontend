@@ -8,39 +8,48 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  posts!:any;
+  posts: any;
+  term: string = '';
+  filteredPosts: any;
 
-  constructor(private postService:PostService, private router: Router){}
+  constructor(private postService: PostService, private router: Router) {}
 
   ngOnInit(): void {
-    this.postService.getAllPosts().subscribe((data)=>{
-      this.posts = data;
-
-    }, (error)=>{
-      console.warn('Some error occured!')
-    })
-    
+    this.postService.getAllPosts().subscribe(
+      (data) => {
+        this.posts = data;
+        this.filteredPosts = data;
+      },
+      (error) => {
+        console.warn('Some error occurred!');
+      }
+    );
   }
 
   editPost(post: any) {
     this.router.navigate(['/editpost', post.id]);
-}
-
+  }
 
   deletePost(post: any) {
-    this.postService.deletePost(post.id).subscribe(() => {
-      // Remove the post from the list of posts
-      this.posts = this.posts.filter((p: any) => p.id !== post.id);
-    }, (error)=>{
-      console.warn('Some error occured while deleting the post!')
-    })
+    this.postService.deletePost(post.id).subscribe(
+      () => {
+        this.posts = this.posts.filter((p: any) => p.id !== post.id);
+        this.filteredPosts = this.filteredPosts.filter((p: any) => p.id !== post.id);
+      },
+      (error) => {
+        console.warn('Some error occurred while deleting the post!');
+      }
+    );
   }
 
   savePost(post: any) {
-    // Add the post to the list of saved posts
     this.postService.addSavedPost(post);
-    // Navigate to the saved-posts page
     this.router.navigate(['/saved-posts']);
   }
 
+  filterPosts() {
+    this.filteredPosts = this.posts.filter((post: any) =>
+      post.title.toLowerCase().includes(this.term.toLowerCase())
+    );
+  }
 }
