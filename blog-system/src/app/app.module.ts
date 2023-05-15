@@ -16,10 +16,11 @@ import { PostsComponent } from './components/posts/posts.component';
 import { RouterModule } from '@angular/router';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
-import { UsersComponent } from './components/users/users.component';
-import { UserProfileComponent } from './components/user-profile/user-profile.component';
+// import { UsersComponent } from './components/users/users.component';
+// import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { SavedPostsComponent } from './components/saved-posts/saved-posts.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -35,9 +36,10 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     PostsComponent,
     AdminHomeComponent,
     AdminHeaderComponent,
-    UsersComponent,
-    UserProfileComponent,
+    // UsersComponent,
+    // UserProfileComponent,
     SavedPostsComponent,
+    UserComponent,
   ],
   
   imports: [

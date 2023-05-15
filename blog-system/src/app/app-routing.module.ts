@@ -7,8 +7,9 @@ import { DetailsPostComponent } from './components/details-post/details-post.com
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdminHomeComponent } from './components/admin-home/admin-home.component';
-import { UsersComponent } from './components/users/users.component';
+// import { UsersComponent } from './components/users/users.component';
 import { SavedPostsComponent } from './components/saved-posts/saved-posts.component';
+import { UserComponent } from './components/user/user.component';
 // import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
   {
@@ -36,7 +37,7 @@ const routes: Routes = [
       path:'admin-home', component:AdminHomeComponent
     },
     {
-      path:'users', component:UsersComponent
+      path:'user', component:UserComponent
     },
 
     // {
