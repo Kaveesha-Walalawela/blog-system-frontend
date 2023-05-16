@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,7 @@ export class LoginComponent implements OnInit {
     password: ''
   };
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
     const localData = localStorage.getItem('signUpUsers');
@@ -52,10 +53,11 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    debugger
+    // debugger
     const isUserExist = this.signupUsers.find(m => m.userName == this.loginObj.userName && m.password == this.loginObj.password);
     if(isUserExist != undefined) {
-      this.router.navigate(['/home']);
+      this.userService.setLoggedInUser(isUserExist); // Set the logged-in user
+      this.router.navigate(['/user']);
     } else {
       alert('Wrong Credentials');
     }
