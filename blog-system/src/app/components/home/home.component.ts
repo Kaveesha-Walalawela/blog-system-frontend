@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   }
 
   editPost(post: any) {
-    this.router.navigate(['/editpost', post.id]);
+    this.router.navigate(['/editpost', post.id]); // Assuming the post ID is stored in the _id property
   }
 
   deletePost(post: any) {

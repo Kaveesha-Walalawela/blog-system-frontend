@@ -27,16 +27,19 @@ export class EditPostComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.postId = params['id'];
-      this.postService.getPostById(this.postId).subscribe((data)=>{
-        this.post = data;
-        this.editPost.setValue({
-          title: this.post.title,
-          author: this.post.author,
-          content: this.post.content
-        });
-      },(error)=>{
-        console.log("Error Occured !")
-      });
+      this.postService.getPostById(this.postId).subscribe(
+        (data) => {
+          this.post = data;
+          this.editPost.patchValue({
+            title: this.post.title,
+            author: this.post.author,
+            content: this.post.content
+          });
+        },
+        (error) => {
+          console.log("Error Occurred!");
+        }
+      );
     });
   }
 
