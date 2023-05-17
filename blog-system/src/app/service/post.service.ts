@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class PostService {
   // private baseUrl = 'http://localhost:3000/posts';
   // private apiUrl = 'your_api_url'; // Replace with your API URL
-  private baseUrl = 'http://localhost:8080/api/posts/post';
+  private baseUrl = 'http://localhost:8080/api/posts';
   private apiUrl = 'http://localhost:8080/api/auth'; // Replace with your API URL
   savedPosts: any[] = [];
 
@@ -19,19 +19,21 @@ export class PostService {
   }
 
   createPost(data: any): Observable<any> {
-    return this.http.post<any>(this.baseUrl, data);
+    return this.http.post<any>(`${this.baseUrl}/post`, data);
   }
 
   getPostById(id: any): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/${id}`);
+    console.log("id-----",id)
+    return this.http.get<any>(`${this.baseUrl}/getPostById/${id}`);
+    
   }
 
   updatePost(id: any, data: any): Observable<any> {
-    return this.http.put<any>(`${this.baseUrl}/${id}`, data);
+    return this.http.put<any>(`${this.baseUrl}/updatePostById/${id}`, data);
   }
 
   deletePost(id: any): Observable<any> {
-    return this.http.delete<any>(`${this.baseUrl}/${id}`);
+    return this.http.delete<any>(`${this.baseUrl}/deletePostById/${id}`);
   }
 
   addSavedPost(post: any) {
