@@ -45,12 +45,16 @@ export class EditPostComponent implements OnInit {
 
   onSubmit() {
     console.log(this.editPost.value);
-    this.postService.updatePost(this.postId, this.editPost.value).subscribe((data)=>{
-      alert("Blog Post Updated Successfully !");
-      this.router.navigate(['/']);
-    },(error)=>{
-      console.log("Error Occured !")
-    })
+    this.postService.updatePost(this.postId, this.editPost.value).subscribe(
+      (data) => {
+        alert("Blog Post Updated Successfully !");
+        this.router.navigate(['/home']); // Redirect to the home page
+      },
+      (error) => {
+        console.log("Error Occurred!");
+      }
+    );
   }
+  
 
 }
