@@ -1,4 +1,3 @@
-// user.component.ts
 import { Component, Inject, OnInit } from '@angular/core';
 import { UserService } from 'src/app/service/user.service';
 import { PostService } from 'src/app/service/post.service';
@@ -27,7 +26,7 @@ export class UserComponent implements OnInit {
   }
 
   loadUserPosts() {
-    this.postService.getUserPosts(this.loggedInUser.id).subscribe(
+    this.postService.getUserPostsByUsername(this.loggedInUser.id).subscribe(
       (data) => {
         this.userPosts = data;
       },

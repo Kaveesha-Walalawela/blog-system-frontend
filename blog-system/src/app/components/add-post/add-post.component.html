@@ -1,22 +1,30 @@
 <app-header></app-header>
 <div class="fullcontainer">
-<div class ="container">
-    <h3 class="text-center mt-10"> Add Your Blog Here...</h3>
-<form [formGroup]="addPost">
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Title</label>
-      <input type="text" class="form-control" formControlName="title">
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Auther</label>
-      <input type="text" class="form-control" formControlName="author">
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Content</label>
-        <textarea class="form-control" placeholder="Leave a blog here" 
-        id="floatingTextarea" formControlName="content"></textarea>
+  <div class="container">
+    <h3 class="text-center mt-10">Add Your Blog Here...</h3>
+    <form [formGroup]="addPost" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Title</label>
+        <input type="text" class="form-control" formControlName="title">
       </div>
-    <button type="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
-  </form>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Author</label>
+        <input type="text" class="form-control" formControlName="author">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Content</label>
+        <textarea class="form-control" placeholder="Leave a blog here" id="floatingTextarea"
+          formControlName="content"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Username</label>
+        <input type="text" class="form-control" formControlName="username" [disabled]="true">
+      </div>      
+      <!-- <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Status</label>
+        <input type="text" class="form-control" formControlName="status">
+      </div> -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </div>
 </div>
