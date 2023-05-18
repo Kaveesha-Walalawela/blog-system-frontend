@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="maincontainer">
-  <div class="container col-sm-8 mx-auto align-item-center">
+  <div class="container col-sm-8 mx-auto align-item-center search-container">
     <input type="text" [(ngModel)]="term" placeholder="Search here...">
     <button class="btn-search" (click)="filterPosts()">Search</button>
     <div>
@@ -21,5 +21,9 @@
     <ng-template #noResults>
       <p class="text-center">No results found.</p>
     </ng-template>
+    <div *ngIf="isPostSaved" class="post-saved-message slide-in">
+      Post saved
+    </div>
   </div>
 </div>
+

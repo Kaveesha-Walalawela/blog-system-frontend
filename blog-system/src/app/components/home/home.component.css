@@ -106,3 +106,79 @@ button.btn-search:hover {
   background-color: #45a049;
 }
 
+.maincontainer {
+  max-height: 500px;
+  overflow-y: scroll;
+  background-image: url('pC:\Users\kavee\Desktop\HSenid\Blog Demo Project\blog-system-frontend\images\addpost.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.search-container {
+  margin-top: 20px; 
+  margin-bottom: 20px;
+}
+
+.text-center {
+  margin-top: 20px; 
+  background-color: #271b3f; /* Set the background color to #271b3f */
+  color: white; /* Set the text color to white */
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+  max-height: 300px; /* Adjust the height as per your preference */
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.post-saved-message {
+  position: fixed;
+  bottom: 20px;
+  left: -5px; /* Start offscreen */
+  padding: 10px 20px;
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  opacity: 0;
+  /* transition: opacity 0.3s ease-in-out; */
+  animation-duration: 0.3s; /* Set the same duration as the transition */
+  animation-fill-mode: forwards; /* Keep the final state of the animation */
+}
+
+.post-saved-message.slide-in {
+  animation-name: slide-in;
+}
+
+.post-saved-message.slide-out {
+  animation-name: slide-out;
+}
+
+
+
+
+
+

@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   posts: any;
   term: string = '';
   filteredPosts: any;
+  // isPostSaved: boolean = false;
 
   constructor(private postService: PostService, private router: Router) {}
 
@@ -42,10 +43,20 @@ export class HomeComponent implements OnInit {
     );
   }
 
+  isPostSaved: boolean = false;
+
   savePost(post: any) {
     this.postService.addSavedPost(post);
-    this.router.navigate(['/saved-posts']);
+    this.isPostSaved = true;
+    this.showPostSavedMessage();
   }
+
+  showPostSavedMessage() {
+    setTimeout(() => {
+      this.isPostSaved = false;
+    }, 3000); // Remove the message after 3 seconds
+  }
+  
 
   filterPosts() {
     this.filteredPosts = this.posts.filter((post: any) =>
