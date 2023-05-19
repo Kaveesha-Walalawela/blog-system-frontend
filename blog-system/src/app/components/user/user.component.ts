@@ -26,7 +26,7 @@ export class UserComponent implements OnInit {
   }
 
   loadUserPosts() {
-    this.postService.getUserPostsByUsername(this.loggedInUser.id).subscribe(
+    this.postService.getUserPostsByUsername(this.loggedInUser.username).subscribe(
       (data) => {
         this.userPosts = data;
       },

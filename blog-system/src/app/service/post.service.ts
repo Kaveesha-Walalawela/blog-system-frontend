@@ -72,7 +72,7 @@ export class PostService {
   }
 
   getUserPostsByUsername(username: string): Observable<any[]> {
-    const url = `${this.baseUrl}?username=${username}`;
+    const url = `${this.baseUrl}/getPostByUsername/${username}`;
     return this.http.get<any[]>(url);
   }
   
