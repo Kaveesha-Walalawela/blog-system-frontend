@@ -1,31 +1,31 @@
+
 <app-header></app-header>
 <div class="background-container">
-<div class="maincontainer">
-  <div class="container col-sm-8 mx-auto align-item-center search-container">
-    <input type="text" [(ngModel)]="term" placeholder="Search here...">
-    <button class="btn-search" (click)="filterPosts()">Search</button>
-    <div>
-      <h3 class="text-center m-t-10">Recent Blogs here...</h3>
-    </div>
-    <div *ngIf="filteredPosts.length > 0; else noResults">
-      <div *ngFor="let post of filteredPosts" class="card mb-3 bg-white text-black p-3">
-        <p><span class="text-bold">Topic:</span> {{post.title}}</p>
-        <p><span class="text-bold">Author:</span> {{post.author}}</p>
-        <p>{{post.content | slice: 0:1000}} <span><a [routerLink]="['/posts', post.id]" class="text">Read more...</a></span></p>
-        <div class="btn-container">
-          <button class="btn-edit" [routerLink]="['/editpost', post.id]">Edit</button>
-          <button class="btn-delete" (click)="deletePost(post)">Delete</button>
-          <button class="btn-save" (click)="savePost(post)">Save</button>
+  <div class="maincontainer">
+    <div class="container col-sm-8 mx-auto align-item-center search-container">
+      <input type="text" [(ngModel)]="term" placeholder="Search here...">
+      <button class="btn-search" (click)="filterPosts()">Search</button>
+      <div>
+        <h3 class="text-center m-t-10">Recent Blogs here...</h3>
+      </div>
+      <div *ngIf="filteredPosts.length > 0; else noResults">
+        <div *ngFor="let post of filteredPosts" class="card mb-3 bg-white text-black p-3">
+          <p><span class="text-bold">Topic:</span> {{post.title}}</p>
+          <p><span class="text-bold">Author:</span> {{post.username}}</p>
+          <p>{{post.content | slice: 0:1000}} <span><a [routerLink]="['/posts', post.id]" class="text">Read more...</a></span></p>
+          <div class="btn-container">
+            <button class="btn-edit" [routerLink]="['/editpost', post.id]">Edit</button>
+            <button class="btn-delete" (click)="deletePost(post)">Delete</button>
+            <button class="btn-save" (click)="savePost(post)">Save</button>
+          </div>
         </div>
       </div>
-    </div>
-    <ng-template #noResults>
-      <p class="text-center">No results found.</p>
-    </ng-template>
-    <div *ngIf="isPostSaved" class="post-saved-message slide-in">
-      Post saved
+      <ng-template #noResults>
+        <p class="text-center">No results found.</p>
+      </ng-template>
+      <div *ngIf="isPostSaved" class="post-saved-message slide-in">
+        Post saved
+      </div>
     </div>
   </div>
 </div>
-</div>
-

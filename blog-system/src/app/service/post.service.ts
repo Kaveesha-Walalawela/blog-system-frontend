@@ -8,12 +8,10 @@ import { UserService } from './user.service';
 })
 export class PostService {
   
-  // private baseUrl = 'http://localhost:3000/posts';
-  // private apiUrl = 'your_api_url'; // Replace with your API URL
   private baseUrl = 'http://localhost:8080/api/posts';
-  private apiUrl = 'http://localhost:8080/api/auth'; // Replace with your API URL
-  private userPostsSubject = new BehaviorSubject<any[]>([]); // BehaviorSubject to keep track of user posts
-  userPosts$: Observable<any[]> = this.userPostsSubject.asObservable(); // Observable for user posts
+  private apiUrl = 'http://localhost:8080/api/auth';
+  private userPostsSubject = new BehaviorSubject<any[]>([]);
+  userPosts$: Observable<any[]> = this.userPostsSubject.asObservable();
   savedPosts: any[] = [];
 
   constructor(private http: HttpClient, private userService: UserService) {}
@@ -29,12 +27,9 @@ export class PostService {
     }
     return this.http.post<any>(`${this.baseUrl}/post`, data);
   }
-  
 
   getPostById(id: any): Observable<any> {
-    console.log("id-----",id)
     return this.http.get<any>(`${this.baseUrl}/getPostById/${id}`);
-    
   }
 
   updatePost(id: any, data: any): Observable<any> {
@@ -60,21 +55,8 @@ export class PostService {
     }
   }
 
-  // getUserPosts(userId: string): Observable<any[]> {
-  //   const url = `${this.apiUrl}/posts?username=${userId}`;
-  //   return this.http.get<any[]>(url);
-  // }
-
-  addPostToUser(userId: string, post: any) {
-    const currentPosts = this.userPostsSubject.value;
-    const updatedPosts = [...currentPosts, post];
-    this.userPostsSubject.next(updatedPosts);
-  }
-
   getUserPostsByUsername(username: string): Observable<any[]> {
     const url = `${this.baseUrl}/getPostByUsername/${username}`;
     return this.http.get<any[]>(url);
   }
-  
-  
 }

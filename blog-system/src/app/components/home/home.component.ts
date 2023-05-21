@@ -11,8 +11,7 @@ export class HomeComponent implements OnInit {
   posts: any;
   term: string = '';
   filteredPosts: any;
-  // isPostSaved: boolean = false;
-
+  
   constructor(private postService: PostService, private router: Router) {}
 
   ngOnInit(): void {
@@ -25,10 +24,6 @@ export class HomeComponent implements OnInit {
         console.warn('Some error occurred!');
       }
     );
-  }
-
-  editPost(post: any) {
-    this.router.navigate(['/editpost', post.id]); // Assuming the post ID is stored in the _id property
   }
 
   deletePost(post: any) {
@@ -56,11 +51,10 @@ export class HomeComponent implements OnInit {
       this.isPostSaved = false;
     }, 3000); // Remove the message after 3 seconds
   }
-  
 
   filterPosts() {
     this.filteredPosts = this.posts.filter((post: any) =>
-      post.title.toLowerCase().includes(this.term.toLowerCase())
-    );
-  }
+post.title.toLowerCase().includes(this.term.toLowerCase())
+);
+}
 }
