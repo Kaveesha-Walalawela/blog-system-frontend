@@ -76,6 +76,9 @@ export class AddPostComponent implements OnInit {
       (error) => {
         console.log('Error Occurred!');
       }
-      );
-    } 
-  } 
+    );
+  }
+}
+
+
+  //
