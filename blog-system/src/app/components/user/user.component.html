@@ -16,6 +16,11 @@
     <h3 class="text-center">Your Posts</h3>
     <div *ngIf="userPosts.length > 0; else noUserPosts">
       <div *ngFor="let post of userPosts" class="card mb-3 bg-white text-black p-3">
+        <div class="post-status" [ngClass]="{
+          'status-pending': post.status === 'PENDING',
+          'status-rejected': post.status === 'REJECTED',
+          'status-draft': post.status === 'DRAFT'
+        }">{{ post.status }}</div>
         <p><span class="text-bold">Title:</span> {{ post.title }}</p>
         <p><span class="text-bold">Author:</span> {{ post.author }}</p>
         <p>{{ post.content | slice: 0:1000 }}</p>

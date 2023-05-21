@@ -171,3 +171,16 @@
   
   /* Add any additional styles specific to this component or modify existing styles as needed */
   
+
+  .status-pending {
+    color: green;
+  }
+  
+  .status-rejected {
+    color: red;
+  }
+  
+  .status-draft {
+    color: blue;
+  }
+  
