@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.postService.getAllPosts().subscribe(
       (data) => {
-        this.posts = data;
-        this.filteredPosts = data;
+        this.posts = data.filter((post: any) => post.status !== 'DRAFT'); // Filter out draft posts
+        this.filteredPosts = this.posts;
       },
       (error) => {
         console.warn('Some error occurred!');

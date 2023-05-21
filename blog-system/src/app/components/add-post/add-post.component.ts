@@ -60,4 +60,28 @@ export class AddPostComponent implements OnInit {
     );
 }
 
+saveAsDraft() {
+  if (this.addPost.invalid) {
+    return;
+  }
+
+  const draftData = {
+    title: this.addPost.value.title,
+    author: this.addPost.value.author,
+    content: this.addPost.value.content,
+    username: this.addPost.value.username,
+    status: 'draft' // Set the status as "draft"
+  };
+
+  this.postService.createPost(draftData).subscribe(
+    (data) => {
+      alert('Blog Draft Saved!');
+      this.addPost.reset();
+    },
+    (error) => {
+      console.log('Error Occurred!');
+    }
+  );
+}
+
 }
