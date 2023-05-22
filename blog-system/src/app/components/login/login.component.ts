@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   signupObj: any = {
     userName: '',
     email: '',
+    phoneNo: '',
     password: '',
     confirmPassword: ''
   };
@@ -42,6 +43,7 @@ export class LoginComponent implements OnInit {
       username: this.signupObj.userName,
       email: this.signupObj.email,
       password: this.signupObj.password,
+      phoneNo: this.signupObj.phoneNo
       // roles: [] // Set the roles if required
     };
   

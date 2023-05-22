@@ -1,26 +1,27 @@
 <a href="/home" class="back-to-home"></a>
 <div class="topContainer">
-	<div class="main">  	
-		<input type="checkbox" id="chk" aria-hidden="true">
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
 
-			<div class="signup">
-				<form>
-					<label for="chk" aria-hidden="true">Sign Up</label>
-					<input type="text" name="txt" placeholder="User name" required="" [(ngModel)]="signupObj.userName">
-					<input type="email" name="email" placeholder="Email" required="" [(ngModel)]="signupObj.email">
-					<input type="password" name="Password" placeholder="Password" required="" [(ngModel)]="signupObj.password">
-					<input type="password" name="confirmPassword" placeholder="Confirm Password" required="" [(ngModel)]="signupObj.confirmPassword">
-					<button (click)="onSignUp()">Sign up</button>
-				</form>
-			</div>
+    <div class="signup">
+      <form>
+        <label for="chk" aria-hidden="true">Sign Up</label>
+        <input type="text" name="txt" placeholder="User name" required="" [(ngModel)]="signupObj.userName">
+        <input type="email" name="email" placeholder="Email" required="" [(ngModel)]="signupObj.email">
+        <input type="password" name="Password" placeholder="Password" required="" [(ngModel)]="signupObj.password">
+        <input type="password" name="confirmPassword" placeholder="Confirm Password" required="" [(ngModel)]="signupObj.confirmPassword">
+        <input type="tel" name="phoneNo" placeholder="Phone Number" required="" [(ngModel)]="signupObj.phoneNo">
+        <button (click)="onSignUp()">Sign up</button>
+      </form>
+    </div>
 
-			<div class="login">
-				<form>
-					<label for="chk" aria-hidden="true">Login</label>
-					<input type="text" name="userName" placeholder="User Name" required="" [(ngModel)]="loginObj.userName">
-					<input type="password" name="password" placeholder="Password" required="" [(ngModel)]="loginObj.password">
-					<button (click)="onLogin()">Login</button>
-				</form>
-			</div>
-	</div>
+    <div class="login">
+      <form>
+        <label for="chk" aria-hidden="true">Login</label>
+        <input type="text" name="userName" placeholder="User Name" required="" [(ngModel)]="loginObj.userName">
+        <input type="password" name="password" placeholder="Password" required="" [(ngModel)]="loginObj.password">
+        <button (click)="onLogin()">Login</button>
+      </form>
+    </div>
+  </div>
 </div>
