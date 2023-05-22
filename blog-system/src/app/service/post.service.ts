@@ -2,22 +2,22 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { UserService } from './user.service';
+import { tap } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-  
   private baseUrl = 'http://localhost:8080/api/posts';
-  private apiUrl = 'http://localhost:8080/api/auth';
   private userPostsSubject = new BehaviorSubject<any[]>([]);
   userPosts$: Observable<any[]> = this.userPostsSubject.asObservable();
   savedPosts: any[] = [];
 
   constructor(private http: HttpClient, private userService: UserService) {}
 
-  getAllPosts(): Observable<any> {
-    return this.http.get<any>(this.baseUrl);
+  getAllPosts(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseUrl);
   }
 
   createPost(data: any): Observable<any> {
@@ -57,6 +57,10 @@ export class PostService {
 
   getUserPostsByUsername(username: string): Observable<any[]> {
     const url = `${this.baseUrl}/getPostByUsername/${username}`;
-    return this.http.get<any[]>(url);
+    return this.http.get<any[]>(url).pipe(
+      tap((posts) => {
+        this.userPostsSubject.next(posts);
+      })
+    );
   }
 }

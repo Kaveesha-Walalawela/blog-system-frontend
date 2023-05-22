@@ -1,39 +1,113 @@
-<app-header></app-header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Management Interface</title>
+  <style>
+    /* CSS styles for post cards and buttons */
+    .post-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
 
-<div class="user-profile">
-  <h2 class="profile-title">User Profile</h2>
-  <div class="profile-info">
-    <div class="avatar">
-      <img src="{{ loggedInUser?.avatar }}" alt="Profile Picture">
-    </div>
-    <div class="user-details">
-      <p class="profile-name">{{ loggedInUser?.username }}</p>
-      <p class="profile-email">{{ loggedInUser?.email }}</p>
-    </div>
-  </div>
+    .post-card h2 {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <app-header></app-header>
 
-  <div class="user-posts">
-    <h3 class="text-center">Your Posts</h3>
-    <div *ngIf="userPosts.length > 0; else noUserPosts">
-      <div *ngFor="let post of userPosts" class="card mb-3 bg-white text-black p-3">
-        <div class="post-status" [ngClass]="{
-          'status-pending': post.status === 'PENDING',
-          'status-rejected': post.status === 'REJECTED',
-          'status-draft': post.status === 'DRAFT'
-        }">{{ post.status }}</div>
-        <p><span class="text-bold">Title:</span> {{ post.title }}</p>
-        <p><span class="text-bold">Author:</span> {{ post.author }}</p>
-        <p>{{ post.content | slice: 0:1000 }}</p>
-        <div class="btn-container">
-          <button class="btn-edit" [routerLink]="['/editpost', post.id]">Edit</button>
-          <button class="btn-delete" (click)="deletePost(post)">Delete</button>
-          <button *ngIf="post.status === 'DRAFT'" class="btn-submit" (click)="submitDraft(post)">Submit</button>
-          <!-- <button class="btn-save" (click)="savePost(post)">Save</button> -->
+  <div class="user-profile">
+    <h2 class="profile-title">User Profile</h2>
+    <div class="profile-info">
+      <div class="avatar">
+        <img src="{{ loggedInUser?.avatar }}" alt="Profile Picture">
+      </div>
+      <div class="user-details">
+        <p class="profile-name">{{ loggedInUser?.username }}</p>
+        <p class="profile-email">{{ loggedInUser?.email }}</p>
+      </div>
+    </div>
+
+    <div class="user-posts">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="selectedTab === 'accepted'" (click)="selectedTab = 'accepted'">Accepted</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="selectedTab === 'rejected'" (click)="selectedTab = 'rejected'">Rejected</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="selectedTab === 'pending'" (click)="selectedTab = 'pending'">Pending</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="selectedTab === 'draft'" (click)="selectedTab = 'draft'">Draft</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div *ngIf="selectedTab === 'accepted'">
+          <h3 class="text-center">Accepted Posts</h3>
+          <div *ngIf="acceptedPosts.length > 0; else noAcceptedPosts">
+            <div *ngFor="let post of acceptedPosts" class="card mb-3 bg-white text-black p-3">
+              <h4>{{ post.title }}</h4>
+              <p>{{ post.content }}</p>
+              <!-- Other post details -->
+            </div>
+          </div>
+          <ng-template #noAcceptedPosts>
+            <p class="text-center">No accepted posts found.</p>
+          </ng-template>
+        </div>
+
+        <div *ngIf="selectedTab === 'rejected'">
+          <h3 class="text-center">Rejected Posts</h3>
+          <div *ngIf="rejectedPosts.length > 0; else noRejectedPosts">
+            <div *ngFor="let post of rejectedPosts" class="card mb-3 bg-white text-black p-3">
+              <h4>{{ post.title }}</h4>
+              <p>{{ post.content }}</p>
+              <!-- Other post details -->
+            </div>
+          </div>
+          <ng-template #noRejectedPosts>
+            <p class="text-center">No rejected posts found.</p>
+          </ng-template>
+        </div>
+
+        <div *ngIf="selectedTab === 'pending'">
+          <h3 class="text-center">Pending Posts</h3>
+          <div *ngIf="pendingPosts.length > 0; else noPendingPosts">
+            <div *ngFor="let post of pendingPosts" class="card mb-3 bg-white text-black p-3">
+              <h4>{{ post.title }}</h4>
+              <p>{{ post.content }}</p>
+              <!-- Other post details -->
+            </div>
+          </div>
+          <ng-template #noPendingPosts>
+            <p class="text-center">No pending posts found.</p>
+          </ng-template>
+        </div>
+
+        <div *ngIf="selectedTab === 'draft'">
+          <h3 class="text-center">Draft Posts</h3>
+          <div *ngIf="draftPosts.length > 0; else noDraftPosts">
+            <div *ngFor="let post of draftPosts" class="card mb-3 bg-white text-black p-3">
+              <h4>{{ post.title }}</h4>
+              <p>{{ post.content }}</p>
+              <!-- Other post details -->
+            </div>
+          </div>
+          <ng-template #noDraftPosts>
+            <p class="text-center">No draft posts found.</p>
+          </ng-template>
         </div>
       </div>
     </div>
-    <ng-template #noUserPosts>
-      <p class="text-center">No posts found.</p>
-    </ng-template>
   </div>
-</div>
+
+  <!-- Include any necessary JavaScript files here -->
+</body>
+</html>
