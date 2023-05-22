@@ -51,4 +51,18 @@ export class UserComponent implements OnInit {
     this.postService.addSavedPost(post);
     this.router.navigate(['/saved-posts']);
   }
+
+  submitDraft(post: any) {
+    // Update the post status to 'PENDING' and send it for submission
+    post.status = 'PENDING';
+    this.postService.updatePost(post.id, post).subscribe(
+      () => {
+        alert('Draft submitted!');
+        this.userPosts.find(p => p.id === post.id).status = 'PENDING'; // Update the status in the userPosts array
+      },
+      (error) => {
+        console.warn('Some error occurred while submitting the draft!');
+      }
+    );
+  }
 }

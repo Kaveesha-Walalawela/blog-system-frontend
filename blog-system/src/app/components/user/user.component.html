@@ -27,7 +27,8 @@
         <div class="btn-container">
           <button class="btn-edit" [routerLink]="['/editpost', post.id]">Edit</button>
           <button class="btn-delete" (click)="deletePost(post)">Delete</button>
-          <button class="btn-save" (click)="savePost(post)">Save</button>
+          <button *ngIf="post.status === 'DRAFT'" class="btn-submit" (click)="submitDraft(post)">Submit</button>
+          <!-- <button class="btn-save" (click)="savePost(post)">Save</button> -->
         </div>
       </div>
     </div>

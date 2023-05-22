@@ -60,4 +60,3 @@ export class PostService {
     return this.http.get<any[]>(url);
   }
 }
-//
