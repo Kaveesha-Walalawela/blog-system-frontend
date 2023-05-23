@@ -32,7 +32,7 @@
     justify-content: center;
     font-size: 36px;
     font-weight: bold;
-    color: #555555;
+    color: #fffdfd;
     overflow: hidden;
   }
   
@@ -42,6 +42,115 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .avatar-color-a {
+    background-color: #800000; /* Dark Red */
+  }
+  
+  .avatar-color-b {
+    background-color: #008000; /* Dark Green */
+  }
+  
+  .avatar-color-c {
+    background-color: #000080; /* Dark Blue */
+  }
+  
+  .avatar-color-d {
+    background-color: #800080; /* Dark Purple */
+  }
+  
+  .avatar-color-e {
+    background-color: #808000; /* Olive */
+  }
+  
+  .avatar-color-f {
+    background-color: #008080; /* Teal */
+  }
+  
+  .avatar-color-g {
+    background-color: #800000; /* Maroon */
+  }
+  
+  .avatar-color-h {
+    background-color: #808080; /* Gray */
+  }
+  
+  .avatar-color-i {
+    background-color: #800080; /* Purple */
+  }
+  
+  .avatar-color-j {
+    background-color: #008000; /* Dark Green */
+  }
+  
+  .avatar-color-k {
+    background-color: #64007a; /* Gray */
+  }
+  
+  .avatar-color-l {
+    background-color: #000080; /* Navy */
+  }
+  
+  .avatar-color-m {
+    background-color: #800000; /* Maroon */
+  }
+  
+  .avatar-color-n {
+    background-color: #008080; /* Teal */
+  }
+  
+  .avatar-color-o {
+    background-color: #808000; /* Olive */
+  }
+  
+  .avatar-color-p {
+    background-color: #008000; /* Dark Green */
+  }
+  
+  .avatar-color-q {
+    background-color: #808080; /* Gray */
+  }
+  
+  .avatar-color-r {
+    background-color: #000080; /* Navy */
+  }
+  
+  .avatar-color-s {
+    background-color: #800000; /* Maroon */
+  }
+  
+  .avatar-color-t {
+    background-color: #008080; /* Teal */
+  }
+  
+  .avatar-color-u {
+    background-color: #808000; /* Olive */
+  }
+  
+  .avatar-color-v {
+    background-color: #800080; /* Purple */
+  }
+  
+  .avatar-color-w {
+    background-color: #008000; /* Dark Green */
+  }
+  
+  .avatar-color-x {
+    background-color: #808080; /* Gray */
+  }
+  
+  .avatar-color-y {
+    background-color: #000080; /* Navy */
+  }
+  
+  .avatar-color-z {
+    background-color: #800000; /* Maroon */
+  }
+  
+  .avatar-color-default {
+    background-color: #f1f1f1;
+    color: #555555;
   }
   
   
@@ -253,4 +362,3 @@
 .btn-share:hover {
   background-color: #008000;
 }
-

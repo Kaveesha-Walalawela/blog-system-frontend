@@ -144,5 +144,44 @@ export class UserComponent implements OnInit {
     }
     return '';
   }
+
+  getAvatarColorClass(username: string | undefined): string {
+    if (username) {
+      const firstLetter = username.charAt(0).toUpperCase();
+      const colorClasses: { [key: string]: string } = {
+        A: 'avatar-color-a',
+        B: 'avatar-color-b',
+        C: 'avatar-color-c',
+        D: 'avatar-color-d',
+        E: 'avatar-color-e',
+        F: 'avatar-color-f',
+        G: 'avatar-color-g',
+        H: 'avatar-color-h',
+        I: 'avatar-color-i',
+        J: 'avatar-color-j',
+        K: 'avatar-color-k',
+        L: 'avatar-color-l',
+        M: 'avatar-color-m',
+        N: 'avatar-color-n',
+        O: 'avatar-color-o',
+        P: 'avatar-color-p',
+        Q: 'avatar-color-q',
+        R: 'avatar-color-r',
+        S: 'avatar-color-s',
+        T: 'avatar-color-t',
+        U: 'avatar-color-u',
+        V: 'avatar-color-v',
+        W: 'avatar-color-w',
+        X: 'avatar-color-x',
+        Y: 'avatar-color-y',
+        Z: 'avatar-color-z'
+      };
+      // Return the corresponding CSS class based on the first letter
+      return colorClasses[firstLetter] || 'avatar-color-default';
+    }
   
+    return 'avatar-color-default';
+  }
+  
+
 }
