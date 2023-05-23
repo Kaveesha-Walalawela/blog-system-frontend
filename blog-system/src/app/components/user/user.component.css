@@ -234,3 +234,20 @@
 .btn-submit:hover {
   background-color: #32568e;
 }
+
+.btn-share {
+  background-color: green;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-share:hover {
+  background-color: #008000;
+}
+
