@@ -132,5 +132,17 @@ export class UserComponent implements OnInit {
       }
     );
   }
+
+  getInitials(name: string): string {
+    if (name) {
+      const names = name.split(' ');
+      if (names.length > 1) {
+        return names[0][0].toUpperCase() + names[names.length - 1][0].toUpperCase();
+      } else {
+        return names[0][0].toUpperCase();
+      }
+    }
+    return '';
+  }
   
 }
