@@ -10,6 +10,7 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
 // import { UsersComponent } from './components/users/users.component';
 import { SavedPostsComponent } from './components/saved-posts/saved-posts.component';
 import { UserComponent } from './components/user/user.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 // import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
   {
@@ -47,6 +48,7 @@ const routes: Routes = [
     {
       path:'saved-posts', component:SavedPostsComponent
     },
+    { path: 'edit-profile', component: EditProfileComponent },
   ];
 
 @NgModule({

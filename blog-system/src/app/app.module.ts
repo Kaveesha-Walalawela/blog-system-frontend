@@ -21,6 +21,7 @@ import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { SavedPostsComponent } from './components/saved-posts/saved-posts.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { UserComponent } from './components/user/user.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { UserComponent } from './components/user/user.component';
     // UserProfileComponent,
     SavedPostsComponent,
     UserComponent,
+    EditProfileComponent,
   ],
   
   imports: [

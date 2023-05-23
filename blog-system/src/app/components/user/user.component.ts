@@ -39,6 +39,10 @@ export class UserComponent implements OnInit {
       this.router.navigate(['/login']); // Redirect to the login page if the user is not logged in
     }
   }
+
+  redirectToEditProfile() {
+    this.router.navigate(['/edit-profile']);
+  }
   
   loadUserPosts() {
     const username = this.loggedInUser?.username;
