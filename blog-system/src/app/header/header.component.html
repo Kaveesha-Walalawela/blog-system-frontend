@@ -23,8 +23,11 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/user">User</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!isLoggedIn">
           <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" (click)="logout()" [ngClass]="{'hover-effect': isLoggedIn}">Logout</a>
         </li>
       </ul>
       <!-- <form class="d-flex" role="search">
@@ -34,3 +37,6 @@
     </div>
   </div>
 </nav>
+
+
+<!-- 3rd edit for hoover -->

@@ -20,6 +20,10 @@ export class UserService {
     }
   }
 
+  logout(): void{
+    localStorage.clear();
+  }
+
   getLoggedInUser(): any {
     return this.loggedInUser;
   }

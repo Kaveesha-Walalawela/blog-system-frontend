@@ -1,0 +1,10 @@
+.navbar-nav .nav-link:hover {
+    background-color: #272626;
+    color: #ffffff;
+  }
+  
+  .navbar-nav .nav-link.logout:hover {
+    background-color: #ca0a0a;
+    color: #ffffff;
+    cursor: pointer;
+  }
