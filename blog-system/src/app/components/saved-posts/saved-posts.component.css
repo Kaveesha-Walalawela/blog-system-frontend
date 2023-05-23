@@ -104,4 +104,28 @@
   button.btn-search:hover {
     background-color: #45a049;
   }
+
+  .container.saved-posts {
+    text-align: center;
+  }
+  
+  .no-posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+  }
+  
+  .no-posts-container img {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .no-posts-container p {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  
   
