@@ -67,13 +67,6 @@ export class LoginComponent implements OnInit {
       password: this.loginObj.password,
     };
   
-    // Check if the user is already logged in
-    const loggedInUser = this.userService.getLoggedInUser();
-    if (loggedInUser) {
-      this.router.navigate(['/user']);
-      return;
-    }
-  
     // Call the login method from the UserService
     this.userService.login(loginData).subscribe(
       response => {
@@ -84,7 +77,11 @@ export class LoginComponent implements OnInit {
       },
       error => {
         // Handle the error response here
-        alert('Wrong Credentials');
+        if (error.status === 401) {
+          alert('Wrong Credentials');
+        } else {
+          alert('An error occurred during login');
+        }
       }
     );
   }
