@@ -30,10 +30,16 @@ export class UserComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.loggedInUser = this.userService.getLoggedInUser();
-    this.loadUserPosts();
+    // Check if the user is already logged in
+    const loggedInUser = this.userService.getLoggedInUser();
+    if (loggedInUser) {
+      this.loggedInUser = loggedInUser;
+      this.loadUserPosts();
+    } else {
+      this.router.navigate(['/login']); // Redirect to the login page if the user is not logged in
+    }
   }
-
+  
   loadUserPosts() {
     const username = this.loggedInUser?.username;
     if (username) {

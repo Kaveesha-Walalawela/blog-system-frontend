@@ -13,14 +13,19 @@ export class UserService {
   private loggedInUser: any;
   private baseUrl = 'http://localhost:8080/api/auth/';
   
-  constructor(private http: HttpClient) { }
-
-  setLoggedInUser(user: any) {
-    this.loggedInUser = user;
+  constructor(private http: HttpClient) { 
+    const storedUser = localStorage.getItem('loggedInUser');
+    if (storedUser) {
+      this.loggedInUser = JSON.parse(storedUser);
+    }
   }
 
-  getLoggedInUser() {
+  getLoggedInUser(): any {
     return this.loggedInUser;
+  }
+
+  setLoggedInUser(user: any): void {
+    this.loggedInUser = user;
   }
 
   isLoggedIn() {

@@ -62,16 +62,24 @@ export class LoginComponent implements OnInit {
   
 
   onLogin() {
-    // Create a loginData object with the necessary properties
     const loginData = {
       username: this.loginObj.userName,
       password: this.loginObj.password,
     };
+  
+    // Check if the user is already logged in
+    const loggedInUser = this.userService.getLoggedInUser();
+    if (loggedInUser) {
+      this.router.navigate(['/user']);
+      return;
+    }
+  
     // Call the login method from the UserService
     this.userService.login(loginData).subscribe(
       response => {
         // Handle the successful response here
         this.userService.setLoggedInUser(response); // Set the logged-in user
+        localStorage.setItem('loggedInUser', JSON.stringify(response)); // Store the logged-in user in local storage
         this.router.navigate(['/user']);
       },
       error => {
