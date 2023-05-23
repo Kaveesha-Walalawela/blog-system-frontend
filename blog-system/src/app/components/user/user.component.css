@@ -34,7 +34,9 @@
     font-weight: bold;
     color: #fffdfd;
     overflow: hidden;
+    margin-right: 20px; /* Added margin to push it slightly to the left */
   }
+  
   
   .letter-avatar {
     width: 100%;
