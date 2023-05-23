@@ -202,5 +202,35 @@
   background-color: #0c7cd5;
 }
 
-  
-  
+/* CSS styles for post cards and buttons */
+.post-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.post-card h2 {
+  margin: 0;
+}
+
+/* Rest of your CSS styles */
+
+.btn-edit,
+.btn-delete,
+.btn-submit {
+  background-color: #4267B2;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover,
+.btn-delete:hover,
+.btn-submit:hover {
+  background-color: #32568e;
+}

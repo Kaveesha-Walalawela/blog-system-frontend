@@ -63,4 +63,13 @@ export class PostService {
       })
     );
   }
+ 
+  getDraftPosts() {
+    return this.http.get<any[]>(`${this.baseUrl}/drafts`);
+  }
+  
+  sharePostById(id: any): Observable<any> {
+    return this.http.put<any>(`${this.baseUrl}/sharePostById/${id}`, {});
+  }
+  
 }

@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { UserService } from 'src/app/service/user.service';
 import { PostService } from 'src/app/service/post.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-user',
@@ -9,49 +11,100 @@ import { Router } from '@angular/router';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  loggedInUser: any; // Variable to store the logged-in user
-  userPosts: any[] = []; // Variable to store user's posts
-  acceptedPosts: any[] = []; // Variable to store accepted posts
-  rejectedPosts: any[] = []; // Variable to store rejected posts
-  pendingPosts: any[] = []; // Variable to store pending posts
-  draftPosts: any[] = []; // Variable to store draft posts
-  selectedTab: string = 'tab1';
+  loggedInUser: any;
+  acceptedPosts: any[] = [];
+  rejectedPosts: any[] = [];
+  pendingPosts: any[] = [];
+  draftPosts: any[] = [];
+  selectedTab: string = 'accepted';
+
+  // private baseUrl = 'http://localhost:8080/api/posts';
+
   constructor(
+    private userService: UserService,
     private postService: PostService,
     private router: Router,
-    private userService: UserService,
+    private http: HttpClient,
+    // @Inject(MatSnackBar) private snackBar: MatSnackBar
+
   ) {}
 
   ngOnInit() {
-    this.loggedInUser = this.userService.getLoggedInUser(); // Get the logged-in user
+    this.loggedInUser = this.userService.getLoggedInUser();
     this.loadUserPosts();
   }
 
   loadUserPosts() {
-    this.postService.getUserPostsByUsername(this.loggedInUser.username).subscribe(
-      (data) => {
-        this.userPosts = data;
-        this.filterPosts(); // Call the method to filter posts based on status
-      },
-      (error) => {
-        console.warn('Some error occurred while fetching user posts!');
-      }
-    );
+    const username = this.loggedInUser?.username;
+    if (username) {
+      this.postService.getUserPostsByUsername(username).subscribe(
+        (data) => {
+          this.acceptedPosts = data.filter((post: any) => post.status === 'ACCEPTED');
+          this.rejectedPosts = data.filter((post: any) => post.status === 'REJECTED');
+          this.pendingPosts = data.filter((post: any) => post.status === 'PENDING');
+          this.draftPosts = data.filter((post: any) => post.status === 'DRAFT');
+          console.log(this.draftPosts)
+        },
+        (error) => {
+          console.warn('Some error occurred while fetching user posts!');
+        }
+      );
+    }
   }
+
+  // deletePost(post: any) {
+  //   this.postService.deletePost(post.id).subscribe(
+  //     () => {
+  //       switch (post.status) {
+  //         case 'ACCEPTED':
+  //           this.acceptedPosts = this.acceptedPosts.filter((p: any) => p.id !== post.id);
+  //           break;
+  //         case 'REJECTED':
+  //           this.rejectedPosts = this.rejectedPosts.filter((p: any) => p.id !== post.id);
+  //           break;
+  //         case 'PENDING':
+  //           this.pendingPosts = this.pendingPosts.filter((p: any) => p.id !== post.id);
+  //           break;
+  //         case 'DRAFT':
+  //           this.draftPosts = this.draftPosts.filter((p: any) => p.id !== post.id);
+  //           break;
+  //       }
+  //     },
+  //     (error) => {
+  //       console.warn('Some error occurred while deleting the post!');
+  //     }
+  //   );
+  // }
+
+  
   
 
-  filterPosts() {
-    this.acceptedPosts = this.userPosts.filter(post => post.status === 'ACCEPTED');
-    this.rejectedPosts = this.userPosts.filter(post => post.status === 'REJECTED');
-    this.pendingPosts = this.userPosts.filter(post => post.status === 'PENDING');
-    this.draftPosts = this.userPosts.filter(post => post.status === 'DRAFT');
+  changeTab(tab: string) {
+    this.selectedTab = tab;
   }
 
+  editPost(post: any): void {
+    this.router.navigate(['/editpost', post.id]);
+  }
+  
+  
   deletePost(post: any) {
     this.postService.deletePost(post.id).subscribe(
       () => {
-        this.userPosts = this.userPosts.filter((p: any) => p.id !== post.id);
-        this.filterPosts(); // Update filtered posts after deleting a post
+        switch (post.status) {
+          case 'ACCEPTED':
+            this.acceptedPosts = this.acceptedPosts.filter((p: any) => p.id !== post.id);
+            break;
+          case 'REJECTED':
+            this.rejectedPosts = this.rejectedPosts.filter((p: any) => p.id !== post.id);
+            break;
+          case 'PENDING':
+            this.pendingPosts = this.pendingPosts.filter((p: any) => p.id !== post.id);
+            break;
+          case 'DRAFT':
+            this.draftPosts = this.draftPosts.filter((p: any) => p.id !== post.id);
+            break;
+        }
       },
       (error) => {
         console.warn('Some error occurred while deleting the post!');
@@ -59,23 +112,19 @@ export class UserComponent implements OnInit {
     );
   }
 
-  savePost(post: any) {
-    this.postService.addSavedPost(post);
-    this.router.navigate(['/saved-posts']);
-  }
-
-  submitDraft(post: any) {
-    // Update the post status to 'PENDING' and send it for submission
-    post.status = 'PENDING';
-    this.postService.updatePost(post.id, post).subscribe(
-      () => {
-        alert('Draft submitted!');
-        this.userPosts.find(p => p.id === post.id).status = 'PENDING'; // Update the status in the userPosts array
-        this.filterPosts(); // Update filtered posts after submitting a draft
+  sharePost(post: any) {
+    console.log('Sharing post:', post);
+    this.postService.sharePostById(post.id).subscribe(
+      (response) => {
+        console.log('Post shared successfully!');
+        alert('Shared successfully');
+        // Refresh the page
+      location.reload();
       },
       (error) => {
-        console.warn('Some error occurred while submitting the draft!');
+        console.warn('Some error occurred while sharing the post!');
       }
     );
   }
+  
 }
