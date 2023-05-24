@@ -1,74 +1,121 @@
-.fullcontainer{
-    max-width: 600px;
-    margin-left: 25%;
-    margin-right: 20%;
-    margin-top: 10px;
-    border: 1px solid gray;
-    border-radius: 10px;
+.container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 500px; 
+  overflow: auto; 
 }
-.fullcontainer {
-    background-color: #271b3f;
-    color: white;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+
+h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #271b3f; 
 }
-.fullcontainer input[type="text"],
-.fullcontainer textarea {
-  margin: 10px 0;
-  font-size: 16px;
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #271b3f; 
+}
+
+input[type="text"],
+textarea {
   border: none;
-  border-bottom: 2px solid white;
-  background-color: transparent;
-  color: white;
+  border-bottom: 2px solid #ccc;
+  font-size: 18px;
+  padding: 10px;
   width: 100%;
+  color: #271b3f; 
 }
-.fullcontainer input[type="text"]::placeholder,
-.fullcontainer textarea::placeholder {
-  color: #ddd;
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #271b3f; 
 }
-.fullcontainer input[type="submit"] {
-  background-color: #573b8a;
-  color: white;
+
+.btn-primary {
+  display: inline-block;
+  background-color: #271b3f; 
   border: none;
   border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
   padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
   margin-right: 10px;
 }
-.fullcontainer input[type="submit"]:hover {
-  background-color: #4a2d70;
+
+.btn-primary:hover {
+  background-color: #007a23; 
+  cursor: pointer;
 }
-.fullcontainer label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 18px;
-    font-weight: bold;
-  }
 
-  .background-container {
-    max-height: 500px;
-  overflow-y: scroll;
-  background-image: url('pC:\Users\kavee\Desktop\HSenid\Blog Demo Project\blog-system-frontend\images\addpost.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  }
+.btn-secondary {
+  display: inline-block;
+  background-color: #4267B2;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-right: 10px;
+}
 
-  .fullcontainer .btn-draft {
-    background-color: #6c757d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  
-  .fullcontainer .btn-draft:hover {
-    background-color: #5a6268;
-  }
-  
-  
+.btn-secondary:hover {
+  background-color: #292963;
+  cursor: pointer;
+}
+
+/* background color and font color for form elements */
+form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  color: #271b3f; 
+}
+
+/* change border color on focus for other form elements */
+form input:focus {
+  border-color: #271b3f; 
+}
+
+/* background color and font color for container elements. */
+body {
+  background-color: #f2f2f2;
+  color: #271b3f; 
+}
+
+.back-to-home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #271b3f;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-home::before {
+  content: "\2190";
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+.back-to-home:hover {
+  background-color: #573b8a;
+}
+
+#floatingTextarea {
+  height: 220px; 
+}

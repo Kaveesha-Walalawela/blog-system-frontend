@@ -1,131 +1,128 @@
 .maincontainer {
-    max-height: 500px;
-    overflow-y: scroll;
-  }
-  
-  h3 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
-  .card {
-    border-radius: 15px;
-    border-color: grey;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  .card p {
-    margin-bottom: 10px;
-  }
-  
-  .card a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none; /* remove underline */
-  }
-  
-  .card a:hover {
-    text-decoration: underline; /* add underline on hover */
-    color: black;
-  }
-  
-  .title {
-    font-weight: bold;
-  }
-  
-  .btn-edit {
-    background-color: #64459f;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    padding: 8px 16px;
-    margin-right: 10px;
-  }
-  
-  .btn-edit:hover {
-    background-color: #382360;
-    cursor: pointer;
-  }
-  
-  .btn-delete {
-    background-color: #d9534f;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    padding: 8px 16px;
-    margin-right: 10px;
-  }
-  
-  .btn-delete:hover {
-    background-color: #a02621;
-    cursor: pointer;
-  }
-  
-  .btn-save {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    padding: 8px 16px;
-    margin-right: 10px;
-  }
-  
-  .btn-save:hover {
-    background-color: #327234;
-    cursor: pointer;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  input[type="text"] {
-    padding: 10px;
-    width: 300px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button.btn-search {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button.btn-search:hover {
-    background-color: #45a049;
-  }
+  max-height: 500px;
+  overflow-y: scroll;
+}
 
-  .container.saved-posts {
-    text-align: center;
-  }
-  
-  .no-posts-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
-  }
-  
-  .no-posts-container img {
-    max-width: 200px;
-    margin-bottom: 20px;
-  }
-  
-  .no-posts-container p {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-  
-  
-  
+h3 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.card {
+  border-radius: 15px;
+  border-color: grey;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card p {
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none; /* remove underline */
+}
+
+.card a:hover {
+  text-decoration: underline; /* add underline on hover */
+  color: black;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.btn-edit {
+  background-color: #64459f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 8px 16px;
+  margin-right: 10px;
+}
+
+.btn-edit:hover {
+  background-color: #382360;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 8px 16px;
+  margin-right: 10px;
+}
+
+.btn-delete:hover {
+  background-color: #a02621;
+  cursor: pointer;
+}
+
+.btn-save {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 8px 16px;
+  margin-right: 10px;
+}
+
+.btn-save:hover {
+  background-color: #327234;
+  cursor: pointer;
+}
+
+.container {
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button.btn-search {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.btn-search:hover {
+  background-color: #45a049;
+}
+
+.container.saved-posts {
+  text-align: center;
+}
+
+.no-posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.no-posts-container img {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.no-posts-container p {
+  font-size: 1.2em;
+  font-weight: bold;
+}

@@ -95,7 +95,7 @@ input[type="text"] {
 button.btn-search {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50;
+  background-color: #008a05;
   color: white;
   border: none;
   border-radius: 4px;
@@ -103,7 +103,7 @@ button.btn-search {
 }
 
 button.btn-search:hover {
-  background-color: #45a049;
+  background-color: #005704;
 }
 
 .maincontainer {
@@ -223,7 +223,8 @@ button.btn-search:hover {
 }
 
 .dropdown-content .dropdown-option:hover {
-  background-color: #f1f1f1;
+  background-color: #7a7a7a;
+  color: white;
 }
 
 .dropdown-content .dropdown-option:last-child {

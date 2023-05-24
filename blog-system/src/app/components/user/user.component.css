@@ -333,3 +333,8 @@
 .btn-delete:hover {
   background-color: #8c0202;
 }
+
+.nav-tabs .nav-link {
+  /* Existing styles */
+  cursor: pointer;
+}
