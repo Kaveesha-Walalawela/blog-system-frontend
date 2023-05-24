@@ -1,1 +1,19 @@
-<p>edit-profile works!</p>
+<a href="/home" class="back-to-home"></a>
+<div class="container col-sm-8 mx-auto align-item-center">
+  <h3 class="text-center m-t-10">Edit Profile</h3>
+  <form [formGroup]="editProfileForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Username:</label>
+      <input type="text" class="form-control" formControlName="username">
+    </div>
+    <div class="form-group">
+      <label>Email:</label>
+      <input type="email" class="form-control" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label>Phone Number:</label>
+      <input type="text" class="form-control" formControlName="phoneNo">
+    </div>
+    <button type="submit" class="btn btn-primary">Update Profile</button>
+  </form>
+</div>
