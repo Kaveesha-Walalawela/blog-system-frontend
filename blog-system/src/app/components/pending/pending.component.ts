@@ -18,7 +18,7 @@ export class PendingComponent implements OnInit {
   loadPendingPosts() {
     this.adminService.getAllPendingPosts().subscribe(
       (data) => {
-        this.pendingPosts = data;
+        this.pendingPosts = data.filter((post: any) => post.status === 'PENDING');
       },
       (error) => {
         console.warn('Some error occurred while fetching pending posts!');
@@ -29,8 +29,8 @@ export class PendingComponent implements OnInit {
   acceptPost(post: any): void {
     this.adminService.acceptPostById(post.id).subscribe(
       (data) => {
-        // Update the status of the post to accepted in the frontend
-        post.status = 'ACCEPTED';
+        // Remove the accepted post from the array
+        this.pendingPosts = this.pendingPosts.filter((p: any) => p.id !== post.id);
       },
       (error) => {
         console.warn('Some error occurred while accepting the post!');
@@ -41,8 +41,8 @@ export class PendingComponent implements OnInit {
   rejectPost(post: any) {
     this.adminService.rejectPostById(post.id).subscribe(
       (data) => {
-        // Update the status of the post to rejected in the frontend
-        post.status = 'REJECTED';
+        // Remove the rejected post from the array
+        this.pendingPosts = this.pendingPosts.filter((p: any) => p.id !== post.id);
       },
       (error) => {
         console.warn('Some error occurred while rejecting the post!');
