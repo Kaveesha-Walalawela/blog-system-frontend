@@ -25,6 +25,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { AdminComponent } from './components/admin/admin.component';
 import { PendingComponent } from './components/pending/pending.component';
 import { UsersComponent } from './components/users/users.component';
+import { WarningComponent } from './components/warning/warning.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { UsersComponent } from './components/users/users.component';
     AdminComponent,
     PendingComponent,
     UsersComponent,
+    WarningComponent,
   ],
   
   imports: [

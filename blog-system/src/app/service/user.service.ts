@@ -46,7 +46,7 @@ export class UserService {
 }
 
 updateProfile(updatedProfile: any): Observable<any> {
-  const url = `${this.baseUrl}update-profile/${this.loggedInUser.id}`;
+  const url = `${this.baseUrl}/updateUserProfile/{userId}${this.loggedInUser.id}`;
   return this.http.put<any>(url, updatedProfile, httpOptions);
 }
 

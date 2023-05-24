@@ -1,2 +1,30 @@
 <app-admin-header></app-admin-header>
-<p>users works!</p>
+<table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Phone Number</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phoneNo }}</td>
+        <td>{{ user.role }}</td>
+        <td class="action-buttons">
+          <button class="update-button">Update</button>
+          <button class="delete-button">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  

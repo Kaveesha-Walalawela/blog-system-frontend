@@ -18,7 +18,7 @@
                 <div class="dropdown-content">
                   <button *ngIf="isUserPost(post)" class="dropdown-option" [routerLink]="['/editpost', post.id]">Edit</button>
                   <button *ngIf="isUserPost(post)" class="dropdown-option" (click)="deletePost(post)">Delete</button>
-                  <button *ngIf="!isUserPost(post)" class="dropdown-option" (click)="savePost(post)">Bookmark</button>
+                  <button *ngIf="!isUserPost(post)" class="dropdown-option" (click)="savePost(post)">Flag</button>
                 </div>
               </div>
             </div>

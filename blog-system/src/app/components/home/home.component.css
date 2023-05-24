@@ -109,7 +109,7 @@ button.btn-search:hover {
 .maincontainer {
   max-height: 500px;
   overflow-y: scroll;
-  background-image: url('pC:\Users\kavee\Desktop\HSenid\Blog Demo Project\blog-system-frontend\images\addpost.jpg');
+  /* background-image: url('pC:\Users\kavee\Desktop\HSenid\Blog Demo Project\blog-system-frontend\images\addpost.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -181,7 +181,7 @@ button.btn-search:hover {
 
   max-height: 500px;
   overflow-y: scroll;
-  background-image: url('pC:\Users\kavee\Desktop\HSenid\Blog Demo Project\blog-system-frontend\images\addpost.jpg');
+  /* background-image: url('pC:\Users\kavee\Desktop\HSenid\Blog Demo Project\blog-system-frontend\images\addpost.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

@@ -14,6 +14,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { AdminComponent } from './components/admin/admin.component';
 import { PendingComponent } from './components/pending/pending.component';
 import { UsersComponent } from './components/users/users.component';
+import { WarningComponent } from './components/warning/warning.component';
 // import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
   {
@@ -56,6 +57,9 @@ const routes: Routes = [
     },
     {
       path: 'users', component:UsersComponent
+    },
+    {
+      path: 'warning', component:WarningComponent
     }
   ];
 

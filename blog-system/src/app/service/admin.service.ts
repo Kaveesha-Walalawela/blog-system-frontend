@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AdminService {
+  
   private baseUrl = 'http://localhost:8080/api/posts';
 
   constructor(private http: HttpClient) { }
@@ -25,6 +26,11 @@ export class AdminService {
     // Implement the method to reject a post by its ID in the backend
     const url = `${this.baseUrl}/rejectPostById/${postId}`;
     return this.http.put<any>(url, {});
+  }
+
+  getAllUsers(): Observable<any[]> {
+    const url = `${this.baseUrl}/admin/users`;
+    return this.http.get<any[]>(url);
   }
 
 }
