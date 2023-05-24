@@ -22,6 +22,9 @@ import { SavedPostsComponent } from './components/saved-posts/saved-posts.compon
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { UserComponent } from './components/user/user.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { PendingComponent } from './components/pending/pending.component';
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
     SavedPostsComponent,
     UserComponent,
     EditProfileComponent,
+    AdminComponent,
+    PendingComponent,
+    UsersComponent,
   ],
   
   imports: [

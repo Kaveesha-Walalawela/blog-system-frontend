@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-admin-header',
@@ -6,5 +8,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-header.component.css']
 })
 export class AdminHeaderComponent {
+
+  isLoggedIn: boolean;
+
+  constructor(private router: Router, private userService: UserService) {
+    this.isLoggedIn = userService.isLoggedIn();
+  }
+  logout(): void {
+    // Clear the local storage login data
+    this.userService.logout();
+    localStorage.removeItem('loggedInUser');
+
+    // Redirect to the login page
+    this.router.navigate(['/login']);
+  }
+
+  navigateToAddPost(): void {
+    if (!this.isLoggedIn) {
+      alert("Oops! To fully enjoy our captivating blog, please sign up or log in.");
+      // Optionally, you can also navigate to the login page
+      this.router.navigate(['/login']);
+    } else {
+      // Navigate to the Add Post page
+      this.router.navigate(['/addpost']);
+    }
+  }
+  
 
 }

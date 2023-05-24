@@ -1,16 +1,16 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { UserService } from 'src/app/service/user.service';
-import { PostService } from 'src/app/service/post.service';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { PostService } from 'src/app/service/post.service';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.css']
 })
-export class UserComponent implements OnInit {
+export class AdminComponent {
+
   loggedInUser: any;
   acceptedPosts: any[] = [];
   rejectedPosts: any[] = [];
@@ -162,3 +162,5 @@ export class UserComponent implements OnInit {
   
 
 }
+
+

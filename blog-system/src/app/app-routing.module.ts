@@ -11,6 +11,9 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
 import { SavedPostsComponent } from './components/saved-posts/saved-posts.component';
 import { UserComponent } from './components/user/user.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { PendingComponent } from './components/pending/pending.component';
+import { UsersComponent } from './components/users/users.component';
 // import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
   {
@@ -40,15 +43,20 @@ const routes: Routes = [
     {
       path:'user', component:UserComponent
     },
-
-    // {
-    //   path:'signup', component:SignupComponent
-    // }
-    // {path: 'dashboard', component:UserDashboardComponent}
     {
       path:'saved-posts', component:SavedPostsComponent
     },
-    { path: 'edit-profile', component: EditProfileComponent },
+    { path: 'edit-profile', component: EditProfileComponent 
+    },
+    {
+      path: 'admin', component:AdminComponent
+    },
+    {
+      path: 'pending', component:PendingComponent
+    },
+    {
+      path: 'users', component:UsersComponent
+    }
   ];
 
 @NgModule({

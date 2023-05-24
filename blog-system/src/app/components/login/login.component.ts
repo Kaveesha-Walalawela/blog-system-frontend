@@ -11,6 +11,7 @@ import { UserService } from 'src/app/service/user.service';
 export class LoginComponent implements OnInit {
   login!: FormGroup;
   signupUsers: any[] = [];
+  roles: string[] = [];
   signupObj: any = {
     userName: '',
     email: '',
@@ -66,13 +67,16 @@ export class LoginComponent implements OnInit {
       username: this.loginObj.userName,
       password: this.loginObj.password,
     };
-  
+    //var rolesString = localStorage.getItem('roles');
+    
     // Call the login method from the UserService
     this.userService.login(loginData).subscribe(
       response => {
         // Handle the successful response here
         this.userService.setLoggedInUser(response); // Set the logged-in user
         localStorage.setItem('loggedInUser', JSON.stringify(response)); // Store the logged-in user in local storage
+        const role = localStorage.getItem('loggedInUser.roles');
+        console.log(role)
         this.router.navigate(['/user']);
       },
       error => {

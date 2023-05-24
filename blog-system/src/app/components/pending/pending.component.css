@@ -1,0 +1,63 @@
+.pending-posts {
+    margin: 20px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bg-white {
+    background-color: #fff;
+  }
+  
+  .text-black {
+    color: #000;
+  }
+  
+  .btn-container {
+    margin-top: 10px;
+  }
+  
+  .btn-accept,
+  .btn-reject {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-accept {
+    background-color: #4caf50;
+  }
+  
+  .btn-reject {
+    background-color: #f44336;
+  }
+  
+  .btn-accept:hover,
+  .btn-reject:hover {
+    background-color: #45a049;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  

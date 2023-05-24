@@ -1,33 +1,247 @@
 .maincontainer{
-    max-height: 500px;
-    overflow-y: scroll;
+  max-height: 500px;
+  overflow-y: scroll;
 }
 
 h3 {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 30px;
+font-size: 2em;
+font-weight: bold;
+margin-bottom: 30px;
 }
 
 .card {
-  border-radius: 15px;
-  border-color: grey;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+border-radius: 15px;
+border-color: grey;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .card p {
-  margin-bottom: 10px;
+margin-bottom: 10px;
 }
 
 .card a {
-  color: white;
-  font-weight: bold;
+color: black;
+font-weight: bold;
+text-decoration: none; /* remove underline */
 }
 
 .card a:hover {
-  text-decoration: none;
-  color: #573b8a;
+text-decoration: underline; /* add underline on hover */
+color: black;
 }
+
+.text-bold {
+font-weight: bold;
+color: black;
+}
+
+.btn-edit {
+background-color: #64459f;
+color: #fff;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+padding: 8px 16px;
+margin-right: 10px;
+}
+
+.btn-edit:hover {
+background-color: #382360;
+cursor: pointer;
+}
+
+.btn-delete {
+background-color: #d9534f;
+color: #fff;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+padding: 8px 16px;
+margin-right: 10px;
+}
+
+.btn-delete:hover {
+background-color: #a02621;
+cursor: pointer;
+}
+
+.btn-save {
+background-color: #4caf50;
+color: #fff;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+padding: 8px 16px;
+margin-right: 10px;
+}
+
+.btn-save:hover {
+background-color: #327234;
+cursor: pointer;
+}
+
+.container {
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button.btn-search {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #008a05;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.btn-search:hover {
+  background-color: #005704;
+}
+
+.maincontainer {
+  max-height: 500px;
+  overflow-y: scroll;
+  background-image: url('pC:\Users\kavee\Desktop\HSenid\Blog Demo Project\blog-system-frontend\images\addpost.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.search-container {
+  margin-top: 20px; 
+  margin-bottom: 20px;
+}
+
+.text-center {
+  margin-top: 20px; 
+  background-color: #271b3f; /* Set the background color to #271b3f */
+  color: white; /* Set the text color to white */
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+  max-height: 300px; /* Adjust the height as per your preference */
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.post-saved-message {
+  position: fixed;
+  bottom: 20px;
+  left: -5px; /* Start offscreen */
+  padding: 10px 20px;
+  background-color: green;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  opacity: 0;
+  /* transition: opacity 0.3s ease-in-out; */
+  animation-duration: 0.3s; /* Set the same duration as the transition */
+  animation-fill-mode: forwards; /* Keep the final state of the animation */
+}
+
+.post-saved-message.slide-in {
+  animation-name: slide-in;
+}
+
+.post-saved-message.slide-out {
+  animation-name: slide-out;
+}
+
+.background-container{
+
+  max-height: 500px;
+  overflow-y: scroll;
+  background-image: url('pC:\Users\kavee\Desktop\HSenid\Blog Demo Project\blog-system-frontend\images\addpost.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-icon {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content .dropdown-option {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content .dropdown-option:hover {
+  background-color: #7a7a7a;
+  color: white;
+}
+
+.dropdown-content .dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+
 
 
 
