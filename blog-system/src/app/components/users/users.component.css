@@ -1,35 +1,42 @@
 table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+  width: 100%;
+  border-collapse: collapse;
+}
 
-  th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
 
-  /* Style for the buttons */
-  .action-buttons {
-    display: flex;
-    justify-content: flex-end;
-  }
+/* Style for the buttons */
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
 
-  .action-buttons button {
-    margin-left: 5px;
-    padding: 6px 10px;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-  }
+.action-buttons button {
+  margin-left: 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-  .delete-button {
-    background-color: #f44336;
-    color: white;
-  }
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
 
-  .btn-delete:hover {
-    background-color: #a02621;
-    cursor: pointer;
-  }
+.btn-delete:hover {
+  background-color: #a02621;
+  cursor: pointer;
+}
+
+/* Add space between columns */
+.role,
+.warning-count {
+  padding-right: 20px;
+}

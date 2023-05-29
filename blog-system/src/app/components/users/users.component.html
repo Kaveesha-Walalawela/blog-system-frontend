@@ -8,6 +8,7 @@
         <th>Email</th>
         <th>Phone Number</th>
         <th>Role</th>
+        <th>Warning Count</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -18,10 +19,12 @@
         <td>{{ user.username }}</td>
         <td>{{ user.email }}</td>
         <td>{{ user.phoneNo }}</td>
-        <td>{{ user.role }}</td>
+        <td>{{ user.roles }}</td>
+        <td>{{ user.warnings }}</td>
         <td class="action-buttons">
+          <button class="warning-button" (click)="warningUser(user.id)">Warning</button>
           <button class="delete-button" (click)="deleteUser(user)">Delete</button>
-          <button class="edit-button" (click)="redirectToEditPage(user.id)">Edit</button>
+          <button class="edit-button" (click)="redirectToEditPage(user.id)">Edit</button>       
         </td>
       </tr>
     </tbody>

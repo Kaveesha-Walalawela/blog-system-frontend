@@ -27,4 +27,8 @@ export class UsersService {
     return this.http.get<any>(`${this.baseUrl}/users/${userId}`);
   }
   
+  warningUser(userId: string): Observable<any> {
+    const url = `${this.baseUrl}/adminWarningUser/${userId}`;
+    return this.http.put<any>(url, {});
+  }  
 }

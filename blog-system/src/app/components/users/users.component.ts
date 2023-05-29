@@ -9,6 +9,7 @@ import { UsersService } from 'src/app/service/users.service';
 })
 export class UsersComponent implements OnInit {
   users: any[] = [];
+  warningCount: number = 0;
 
   constructor(
     private router: Router,
@@ -68,4 +69,23 @@ export class UsersComponent implements OnInit {
       }
     );
   }
-}
+
+  warningUser(userId: string) {
+    this.usersService.warningUser(userId).subscribe(
+      (data) => {
+        // Handle successful warning response
+        console.log('User warned successfully:', data);
+        // Update the users list with the updated user
+        const updatedUser = this.users.find(u => u.id === userId);
+        if (updatedUser) {
+          updatedUser.warningCount = data.warningCount; // Update the warning count
+        }
+      },
+      (error) => {
+        // Handle error response
+        console.error('Error warning user:', error);
+      }
+    );
+  }
+  
+}  
