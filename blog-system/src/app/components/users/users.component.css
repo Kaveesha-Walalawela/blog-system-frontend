@@ -25,14 +25,26 @@ td {
   cursor: pointer;
 }
 
+.warning-button {
+  background-color: #ff9800;
+  color: white;
+}
+
 .delete-button {
   background-color: #f44336;
   color: white;
 }
 
-.btn-delete:hover {
-  background-color: #a02621;
-  cursor: pointer;
+.edit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Hover styles for the buttons */
+.warning-button:hover,
+.delete-button:hover,
+.edit-button:hover {
+  opacity: 0.8;
 }
 
 /* Add space between columns */
