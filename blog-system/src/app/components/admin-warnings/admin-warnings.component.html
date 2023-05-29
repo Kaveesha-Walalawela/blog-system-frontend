@@ -1,9 +1,22 @@
 <app-admin-header></app-admin-header>
 
 <div class="user-cards">
-    <div *ngFor="let user of users" class="user-card">
+  <div class="warning-more">
+    <h2>Warnings More Than 5</h2>
+    <div *ngFor="let user of usersMoreThan5" class="user-card">
       <h3>{{ user.username }}</h3>
-      <p>ID: {{ user.id }}</p>
+      <!-- <p>ID: {{ user.id }}</p> -->
+      <p>Warning Count: {{ user.warnings }}</p>
+      <button class="delete-button" (click)="deleteUser(user)">Delete</button>
+    </div>
+  </div>
+
+  <div class="warning-less">
+    <h2>Warnings Less Than 5</h2>
+    <div *ngFor="let user of usersLessThan5" class="user-card">
+      <h3>{{ user.username }}</h3>
+      <!-- <p>ID: {{ user.id }}</p> -->
       <p>Warning Count: {{ user.warnings }}</p>
     </div>
   </div>
+</div>

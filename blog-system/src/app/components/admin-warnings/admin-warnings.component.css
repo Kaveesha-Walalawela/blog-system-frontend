@@ -2,6 +2,20 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-between; /* New: Add space between sections */
+  }
+  
+  .warning-more {
+    flex: 1 1 auto; /* New: Allow section to grow and shrink */
+    max-width: calc(50% - 10px); /* New: Limit section width to half minus gap */
+    padding-right: 10px; /* New: Add right padding */
+    border-right: 1px solid #ccc; /* New: Add right border */
+  }
+  
+  .warning-less {
+    flex: 1 1 auto; /* New: Allow section to grow and shrink */
+    max-width: calc(50% - 10px); /* New: Limit section width to half minus gap */
+    padding-left: 10px; /* New: Add left padding */
   }
   
   .user-card {
@@ -10,14 +24,49 @@
     border-radius: 4px;
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 100%; /* Updated: Set width to 100% */
   }
   
   .user-card h3 {
     margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
   }
   
   .user-card p {
     margin-bottom: 10px;
+    font-size: 14px;
   }
+  
+  .user-card.warning-less {
+    border-color: #52c41a;
+  }
+  
+  .user-card.warning-more {
+    border-color: #f5222d;
+  }
+
+  .delete-button {
+    background-color: #f5222d;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #d32029;
+  }
+  
+  .delete-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(245, 34, 45, 0.3);
+  }
+  
+  .delete-button:active {
+    background-color: #b11920;
+  }
+  
   

@@ -36,5 +36,10 @@ export class UsersService {
     const url = `${this.baseUrl}/userWarnings`; 
     return this.http.get<number[]>(url);
   }
+
+  deleteUserByUsername(username: string): Observable<any> {
+    return this.http.delete<any>(`${this.baseUrl}/adminDeleteUserByUsername/${username}`);
+  }
+  
   
 }
