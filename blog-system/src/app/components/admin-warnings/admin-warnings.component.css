@@ -1,0 +1,23 @@
+.user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .user-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .user-card h3 {
+    margin-top: 0;
+  }
+  
+  .user-card p {
+    margin-bottom: 10px;
+  }
+  

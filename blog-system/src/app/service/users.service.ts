@@ -31,4 +31,10 @@ export class UsersService {
     const url = `${this.baseUrl}/adminWarningUser/${userId}`;
     return this.http.put<any>(url, {});
   }  
+
+  getWarnings(): Observable<number[]> {
+    const url = `${this.baseUrl}/userWarnings`; 
+    return this.http.get<number[]>(url);
+  }
+  
 }

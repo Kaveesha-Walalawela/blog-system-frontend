@@ -1,1 +1,9 @@
-<p>admin-warnings works!</p>
+<app-admin-header></app-admin-header>
+
+<div class="user-cards">
+    <div *ngFor="let user of users" class="user-card">
+      <h3>{{ user.username }}</h3>
+      <p>ID: {{ user.id }}</p>
+      <p>Warning Count: {{ user.warnings }}</p>
+    </div>
+  </div>
