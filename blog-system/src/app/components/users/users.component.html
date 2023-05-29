@@ -20,8 +20,8 @@
         <td>{{ user.phoneNo }}</td>
         <td>{{ user.role }}</td>
         <td class="action-buttons">
-          <button class="update-button">Update</button>
-          <button class="delete-button">Delete</button>
+          <button class="delete-button" (click)="deleteUser(user)">Delete</button>
+          <button class="edit-button" (click)="redirectToEditPage(user.id)">Edit</button>
         </td>
       </tr>
     </tbody>

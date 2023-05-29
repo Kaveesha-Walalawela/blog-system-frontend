@@ -14,4 +14,17 @@ export class UsersService {
     const url = `${this.baseUrl}/users`;
     return this.http.get<any[]>(url);
   }
+
+  updateUser(userId: string, updatedUser: any): Observable<any> {
+    return this.http.put<any>(`${this.baseUrl}/adminUpdateUserById/${userId}`, updatedUser);
+  }
+
+  deleteUser(userId: string): Observable<any> {
+    return this.http.delete<any>(`${this.baseUrl}/adminDeleteUserById/${userId}`);
+  }
+
+  getUserById(userId: string): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/users/${userId}`);
+  }
+  
 }

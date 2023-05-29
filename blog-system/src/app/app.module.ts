@@ -26,6 +26,9 @@ import { AdminComponent } from './components/admin/admin.component';
 import { PendingComponent } from './components/pending/pending.component';
 import { UsersComponent } from './components/users/users.component';
 import { WarningComponent } from './components/warning/warning.component';
+import { AdminEditUsersComponent } from './components/admin-edit-users/admin-edit-users.component';
+import { AdminAddPostComponent } from './components/admin-add-post/admin-add-post.component';
+
 
 @NgModule({
   declarations: [
@@ -50,6 +53,8 @@ import { WarningComponent } from './components/warning/warning.component';
     PendingComponent,
     UsersComponent,
     WarningComponent,
+    AdminEditUsersComponent,
+    AdminAddPostComponent,
   ],
   
   imports: [

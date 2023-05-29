@@ -15,6 +15,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { PendingComponent } from './components/pending/pending.component';
 import { UsersComponent } from './components/users/users.component';
 import { WarningComponent } from './components/warning/warning.component';
+import { AdminEditUsersComponent } from './components/admin-edit-users/admin-edit-users.component';
+import { AdminAddPostComponent } from './components/admin-add-post/admin-add-post.component';
 // import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
   {
@@ -60,7 +62,14 @@ const routes: Routes = [
     },
     {
       path: 'warning', component:WarningComponent
+    },
+    {
+      path: 'admin-edit-users', component:AdminEditUsersComponent
+    },
+    {
+      path: 'admin-add-post', component:AdminAddPostComponent
     }
+ 
   ];
 
 @NgModule({

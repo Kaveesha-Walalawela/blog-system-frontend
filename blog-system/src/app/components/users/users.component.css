@@ -24,12 +24,12 @@ table {
     cursor: pointer;
   }
 
-  .update-button {
-    background-color: #4caf50;
-    color: white;
-  }
-
   .delete-button {
     background-color: #f44336;
     color: white;
+  }
+
+  .btn-delete:hover {
+    background-color: #a02621;
+    cursor: pointer;
   }

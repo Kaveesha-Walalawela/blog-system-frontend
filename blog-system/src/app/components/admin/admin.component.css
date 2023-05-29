@@ -297,7 +297,7 @@
   }
   
   .btn-edit-profile {
-    background-color: #4267B2;
+    background-color: #f44336;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -309,7 +309,7 @@
   }
   
   .btn-edit-profile:hover {
-    background-color: #203558;
+    background-color: #9f0b00;
   }
   
   /* Remove duplicate styles for edit and delete buttons */

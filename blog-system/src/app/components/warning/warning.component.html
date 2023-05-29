@@ -1,1 +1,21 @@
 <app-admin-header></app-admin-header>
+<div class="container" [ngClass]="{'saved-posts': savedPosts.length > 0}">
+  <ng-container *ngIf="savedPosts.length > 0; else noPostsContainer">
+    <div *ngFor="let post of savedPosts" class="card mb-3 bg-white text-black p-3">
+      <p class="text-bold">{{post.title}}</p>
+      <p class="text-bold">{{post.author}}</p>
+      <p class="text-bold">{{post.content | slice: 0:1000}} <span><a [routerLink]="
+        ['/posts', post.id]" class="text-black text-bold">Read more...</a></span></p>
+      <div class="btn-container">
+        <button class="btn-delete" (click)="removeSavedPost(post)">Remove</button>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #noPostsContainer>
+    <div class="no-posts-container">
+      <img src="images/savedposts.png" alt="No saved posts">
+      <p>No saved posts to display</p>
+    </div>
+  </ng-template>
+</div>

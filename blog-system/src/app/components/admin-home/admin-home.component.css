@@ -109,7 +109,7 @@ button.btn-search:hover {
 .maincontainer {
   max-height: 500px;
   overflow-y: scroll;
-  background-image: url('pC:\Users\kavee\Desktop\HSenid\Blog Demo Project\blog-system-frontend\images\addpost.jpg');
+  /* background-image: url('pC:\Users\kavee\Desktop\HSenid\Blog Demo Project\blog-system-frontend\images\addpost.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -122,7 +122,7 @@ button.btn-search:hover {
 
 .text-center {
   margin-top: 20px; 
-  background-color: #271b3f; /* Set the background color to #271b3f */
+  background-color: #f44336; /* Set the background color to #271b3f */
   color: white; /* Set the text color to white */
   border-radius: 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -181,7 +181,7 @@ button.btn-search:hover {
 
   max-height: 500px;
   overflow-y: scroll;
-  background-image: url('pC:\Users\kavee\Desktop\HSenid\Blog Demo Project\blog-system-frontend\images\addpost.jpg');
+  /* background-image: url('pC:\Users\kavee\Desktop\HSenid\Blog Demo Project\blog-system-frontend\images\addpost.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

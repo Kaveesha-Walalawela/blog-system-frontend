@@ -1,5 +1,7 @@
 .pending-posts {
     margin: 20px;
+    color: #f44336
+    ;
   }
   
   .text-center {
@@ -52,12 +54,16 @@
     background-color: #f44336;
   }
   
-  .btn-accept:hover,
+  .btn-accept:hover{
+    background-color: #214f24;
+  }
+
   .btn-reject:hover {
-    background-color: #45a049;
+    background-color: #801512;
   }
   
   .text-center {
     text-align: center;
   }
+  
   

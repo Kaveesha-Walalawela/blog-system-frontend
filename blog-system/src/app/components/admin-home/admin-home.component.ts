@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AdminService } from 'src/app/service/admin.service';
 import { PostService } from 'src/app/service/post.service';
 import { UserService } from 'src/app/service/user.service';
 
@@ -18,7 +19,8 @@ export class AdminHomeComponent implements OnInit {
   constructor(
     private postService: PostService,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private adminService: AdminService
   ) {}
 
   ngOnInit(): void {
@@ -57,7 +59,7 @@ export class AdminHomeComponent implements OnInit {
   isPostSaved: boolean = false;
 
   savePost(post: any) {
-    this.postService.addSavedPost(post);
+    this.adminService.addSavedPost(post);
     this.isPostSaved = true;
     this.showPostSavedMessage();
   }

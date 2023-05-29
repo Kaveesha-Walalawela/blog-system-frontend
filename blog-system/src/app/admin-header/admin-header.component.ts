@@ -23,14 +23,14 @@ export class AdminHeaderComponent {
     this.router.navigate(['/login']);
   }
 
-  navigateToAddPost(): void {
+  navigateToAdminAddPost(): void {
     if (!this.isLoggedIn) {
       alert("Oops! To fully enjoy our captivating blog, please sign up or log in.");
       // Optionally, you can also navigate to the login page
       this.router.navigate(['/login']);
     } else {
       // Navigate to the Add Post page
-      this.router.navigate(['/addpost']);
+      this.router.navigate(['/admin-add-post']);
     }
   }
   

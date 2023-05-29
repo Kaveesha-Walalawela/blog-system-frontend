@@ -9,6 +9,9 @@ export class AdminService {
   
   private baseUrl = 'http://localhost:8080/api/posts';
 
+  savedPosts: any[] = [];
+
+
   constructor(private http: HttpClient) { }
 
   getAllPendingPosts(): Observable<any> {
@@ -32,5 +35,21 @@ export class AdminService {
     const url = `${this.baseUrl}/admin/users`;
     return this.http.get<any[]>(url);
   }
+
+  addSavedPost(post: any) {
+    this.savedPosts.push(post);
+  }
+
+  getSavedPosts() {
+    return this.savedPosts;
+  }
+
+  removeSavedPost(post: any) {
+    const index = this.savedPosts.indexOf(post);
+    if (index >= 0) {
+      this.savedPosts.splice(index, 1);
+    }
+  }
+
 
 }
