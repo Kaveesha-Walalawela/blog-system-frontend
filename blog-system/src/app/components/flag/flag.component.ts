@@ -3,10 +3,10 @@ import { AdminService } from 'src/app/service/admin.service';
 
 @Component({
   selector: 'app-warning',
-  templateUrl: './warning.component.html',
-  styleUrls: ['./warning.component.css']
+  templateUrl: './flag.component.html',
+  styleUrls: ['./flag.component.css']
 })
-export class WarningComponent implements OnInit{
+export class FlagComponent implements OnInit{
 
   savedPosts: any[] = [];
 
