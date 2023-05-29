@@ -62,6 +62,10 @@ export class UsersComponent implements OnInit {
         console.log('User deleted successfully');
         // Remove the deleted user from the users list
         this.users = this.users.filter(u => u.id !== user.id);
+        // Auto refresh the page after 2 seconds
+        setTimeout(() => {
+          location.reload();
+        }, 2000);
       },
       (error) => {
         // Handle error response
@@ -69,7 +73,7 @@ export class UsersComponent implements OnInit {
       }
     );
   }
-
+  
   warningUser(userId: string) {
     this.usersService.warningUser(userId).subscribe(
       (data) => {
@@ -80,6 +84,10 @@ export class UsersComponent implements OnInit {
         if (updatedUser) {
           updatedUser.warningCount = data.warningCount; // Update the warning count
         }
+        // Auto refresh the page after 2 seconds
+        setTimeout(() => {
+          location.reload();
+        }, 2000);
       },
       (error) => {
         // Handle error response
@@ -87,5 +95,5 @@ export class UsersComponent implements OnInit {
       }
     );
   }
-  
+
 }  

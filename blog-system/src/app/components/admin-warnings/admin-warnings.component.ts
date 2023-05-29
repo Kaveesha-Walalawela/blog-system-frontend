@@ -38,6 +38,10 @@ export class AdminWarningsComponent implements OnInit {
         console.log('User deleted successfully');
         // Remove the deleted user from the users list
         this.users = this.users.filter(u => u.id !== user.id);
+        // Auto refresh the page after 2 seconds
+        setTimeout(() => {
+          location.reload();
+        }, 2000);
       },
       (error) => {
         // Handle error response
@@ -45,6 +49,4 @@ export class AdminWarningsComponent implements OnInit {
       }
     );
   }
-  
-
 }
