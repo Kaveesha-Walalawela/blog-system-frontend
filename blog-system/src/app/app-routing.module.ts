@@ -64,8 +64,7 @@ const routes: Routes = [
     {
       path: 'flag', component:FlagComponent
     },
-    {
-      path: 'admin-edit-users', component:AdminEditUsersComponent
+    { path: 'admin-edit-users/:id', component: AdminEditUsersComponent 
     },
     {
       path: 'admin-add-post', component:AdminAddPostComponent
