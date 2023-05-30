@@ -75,9 +75,26 @@ export class LoginComponent implements OnInit {
         // Handle the successful response here
         this.userService.setLoggedInUser(response); // Set the logged-in user
         localStorage.setItem('loggedInUser', JSON.stringify(response)); // Store the logged-in user in local storage
-        const role = localStorage.getItem('loggedInUser.roles');
-        console.log(role)
-        this.router.navigate(['/user']);
+        // this.router.navigate(['/user']);
+
+        // Get the roles from the logged-in user
+        const roles = response.roles;
+  
+        // Check if roles is not null and has the expected structure
+        if (roles && Array.isArray(roles)) {
+          // Redirect based on the role
+          if (roles.includes('ROLE_ADMIN')) {
+            this.router.navigate(['/admin']);
+          } else if (roles.includes('ROLE_USER')) {
+            this.router.navigate(['/user']);
+          } else {
+            // Handle other roles or scenarios here
+            alert('Unknown role');
+          }
+        } else {
+          // Handle the case when roles is null or not available
+          alert('Invalid roles data in the response');
+        }
       },
       error => {
         // Handle the error response here
