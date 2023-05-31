@@ -17,6 +17,7 @@ export class UserComponent implements OnInit {
   pendingPosts: any[] = [];
   draftPosts: any[] = [];
   selectedTab: string = 'accepted';
+  warningsCount: number = 0;
 
   // private baseUrl = 'http://localhost:8080/api/posts';
 
@@ -35,6 +36,7 @@ export class UserComponent implements OnInit {
     if (loggedInUser) {
       this.loggedInUser = loggedInUser;
       this.loadUserPosts();
+      this.loadWarningsCount();
     } else {
       this.router.navigate(['/login']); // Redirect to the login page if the user is not logged in
     }
@@ -57,6 +59,20 @@ export class UserComponent implements OnInit {
         },
         (error) => {
           console.warn('Some error occurred while fetching user posts!');
+        }
+      );
+    }
+  }
+
+  loadWarningsCount() {
+    const username = this.loggedInUser?.username;
+    if (username) {
+      this.userService.getWarningsCount(username).subscribe(
+        (count) => {
+          this.warningsCount = count;
+        },
+        (error) => {
+          console.warn('Some error occurred while fetching warnings count!');
         }
       );
     }

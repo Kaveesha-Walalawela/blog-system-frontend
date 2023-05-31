@@ -11,6 +11,7 @@
     <div class="user-details">
       <p class="profile-name">Hello,{{ loggedInUser?.username }}</p>
       <p class="profile-email">Email:{{ loggedInUser?.email }}</p>
+      <p class="warnings-count">Warnings: {{ warningsCount }}</p>
       <button class="btn-edit-profile" routerLink="/edit-profile">Edit Profile</button>
     </div>
   </div>

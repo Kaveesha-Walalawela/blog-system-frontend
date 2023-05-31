@@ -18,6 +18,7 @@ import { FlagComponent } from './components/flag/flag.component';
 import { AdminEditUsersComponent } from './components/admin-edit-users/admin-edit-users.component';
 import { AdminAddPostComponent } from './components/admin-add-post/admin-add-post.component';
 import { AdminWarningsComponent } from './components/admin-warnings/admin-warnings.component';
+import { UserWarningsComponent } from './components/user-warnings/user-warnings.component';
 // import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
   {
@@ -71,6 +72,9 @@ const routes: Routes = [
     },
     {
       path: 'admin-warnings', component:AdminWarningsComponent
+    },
+    {
+      path: 'user-warnings', component:UserWarningsComponent
     }
  
   ];

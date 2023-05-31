@@ -50,4 +50,9 @@ updateProfile(updatedProfile: any): Observable<any> {
   return this.http.put<any>(url, updatedProfile, httpOptions);
 }
 
+getWarningsCount(username: string): Observable<number> {
+  const url = `${this.baseUrl}userWarningsCount/${username}`;
+  return this.http.get<number>(url);
+}
+
 }
