@@ -169,6 +169,18 @@
   color: #888888;
 }
 
+.warning-box {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  margin-left: 11px;
+  margin-top: 10px;
+  border-radius: 4px;
+  text-align: center;
+  width: 500px; /* Adjust the width to match the button */
+}
+
 .user-posts {
   width: 100%;
   margin-top: 40px;
