@@ -39,6 +39,41 @@ export class LoginComponent implements OnInit {
       return;
     }
 
+    if (
+      this.signupObj.userName === '' ||
+      this.signupObj.email === '' ||
+      this.signupObj.phoneNo === '' ||
+      this.signupObj.password === '' ||
+      this.signupObj.confirmPassword === ''
+    ) {
+      alert('All fields are required');
+      return;
+    }
+
+    if (
+      this.signupObj.userName.includes(' ') ||
+      this.signupObj.email.includes(' ') ||
+      this.signupObj.phoneNo.includes(' ')
+    ) {
+      alert('Username, email, and phone number cannot contain spaces');
+      return;
+    }
+
+    // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(this.signupObj.email)) {
+    alert('Invalid email format');
+    return;
+  }
+
+  // Phone number validation
+  const phoneRegex = /^[0-9]+$/;
+  if (!phoneRegex.test(this.signupObj.phoneNo)) {
+    alert('Invalid phone number format. Please enter only numbers.');
+    return;
+  }
+
+
     // Create a signupData object with the necessary properties
     const signupData = {
       username: this.signupObj.userName,

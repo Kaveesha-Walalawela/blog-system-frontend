@@ -19,6 +19,7 @@ import { AdminEditUsersComponent } from './components/admin-edit-users/admin-edi
 import { AdminAddPostComponent } from './components/admin-add-post/admin-add-post.component';
 import { AdminWarningsComponent } from './components/admin-warnings/admin-warnings.component';
 import { UserWarningsComponent } from './components/user-warnings/user-warnings.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 // import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
   {
@@ -75,6 +76,9 @@ const routes: Routes = [
     },
     {
       path: 'user-warnings', component:UserWarningsComponent
+    },
+    {
+      path: 'reset-password', component:ResetPasswordComponent
     }
  
   ];

@@ -30,6 +30,7 @@ import { AdminEditUsersComponent } from './components/admin-edit-users/admin-edi
 import { AdminAddPostComponent } from './components/admin-add-post/admin-add-post.component';
 import { AdminWarningsComponent } from './components/admin-warnings/admin-warnings.component';
 import { UserWarningsComponent } from './components/user-warnings/user-warnings.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { UserWarningsComponent } from './components/user-warnings/user-warnings.
     AdminAddPostComponent,
     AdminWarningsComponent,
     UserWarningsComponent,
+    ResetPasswordComponent,
   ],
   
   imports: [

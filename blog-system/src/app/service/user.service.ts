@@ -11,7 +11,7 @@ const httpOptions = {
 })
 export class UserService {
   private loggedInUser: any;
-  private baseUrl = 'http://localhost:8080/api/auth/';
+  private baseUrl = 'http://localhost:8080/api/auth';
   
   constructor(private http: HttpClient) { 
     const storedUser = localStorage.getItem('loggedInUser');
@@ -36,23 +36,28 @@ export class UserService {
     return this.loggedInUser != null;
   }
   signup(signupData: any): Observable<any> {
-    const url = `${this.baseUrl}signup`;
+    const url = `${this.baseUrl}/signup`;
     return this.http.post<any>(url, signupData);
   }
 
   login(loginData: any): Observable<any> {
-    const url = `${this.baseUrl}signin`;
+    const url = `${this.baseUrl}/signin`;
     return this.http.post<any>(url, loginData);
 }
 
 updateProfile(updatedProfile: any): Observable<any> {
-  const url = `${this.baseUrl}/updateProfileByUserId/{userId}${this.loggedInUser.id}`;
+  const url = `${this.baseUrl}/updateProfileByUserId/${this.loggedInUser.id}`;
   return this.http.put<any>(url, updatedProfile, httpOptions);
 }
 
 getWarningsCount(username: string): Observable<number> {
-  const url = `${this.baseUrl}userWarningsCount/${username}`;
+  const url = `${this.baseUrl}/userWarningsCount/${username}`;
   return this.http.get<number>(url);
+}
+
+resetPassword(username: string): Observable<any> {
+  const url = `${this.baseUrl}/reset-password`;
+  return this.http.post<any>(url, { username });
 }
 
 }
