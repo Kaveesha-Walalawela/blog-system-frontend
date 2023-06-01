@@ -10,9 +10,11 @@ import { UserService } from '../service/user.service';
 export class HeaderComponent {
 
   isLoggedIn: boolean;
+  loggedInUser: any;
 
   constructor(private router: Router, private userService: UserService) {
     this.isLoggedIn = userService.isLoggedIn();
+    this.loggedInUser = userService.getLoggedInUser();
   }
   logout(): void {
     // Clear the local storage login data
