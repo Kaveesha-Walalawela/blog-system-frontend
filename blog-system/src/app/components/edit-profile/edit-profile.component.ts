@@ -15,7 +15,7 @@ export class EditProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.editProfileForm = new FormGroup({
-      username: new FormControl('', Validators.required),
+      username: new FormControl({ value: '', disabled: true }, Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       phoneNo: new FormControl('', Validators.required)
     });
