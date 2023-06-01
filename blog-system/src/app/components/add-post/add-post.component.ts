@@ -11,6 +11,7 @@ import { UserService } from 'src/app/service/user.service'; // Update the path t
 export class AddPostComponent implements OnInit {
   addPost!: FormGroup;
   userService: UserService;
+  submitted: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -35,6 +36,14 @@ export class AddPostComponent implements OnInit {
   }
 
   onSubmit() {
+
+    this.submitted = true;
+
+    if (this.addPost.invalid) {
+      alert('Some fields are empty!');
+      return;
+    }
+
     if (this.addPost.invalid) {
       return;
     }
@@ -49,6 +58,7 @@ export class AddPostComponent implements OnInit {
       (data) => {
         alert('Blog Post Successful!');
         this.addPost.reset();
+        this.submitted = false;
       },
       (error) => {
         console.log('Error Occurred!');
@@ -57,6 +67,14 @@ export class AddPostComponent implements OnInit {
   }
 
   saveAsDraft() {
+
+    this.submitted = true;
+
+    if (this.addPost.invalid) {
+      alert('Some fields are empty!');
+      return;
+    }
+
     if (this.addPost.invalid) {
       return;
     }
@@ -72,6 +90,7 @@ export class AddPostComponent implements OnInit {
       (data) => {
         alert('Blog Draft Saved!');
         this.addPost.reset();
+        this.submitted = false;
       },
       (error) => {
         console.log('Error Occurred!');
