@@ -88,14 +88,14 @@ export class LoginComponent implements OnInit {
       response => {
         // Handle the successful response here
         alert('Account Created Successfully. Please login!');
+        window.location.reload();
       },
       error => {
         // Handle the error response here
         alert('Error occurred during signup');
-      }
+      },
     );
   }
-  
 
   onLogin() {
     const loginData = {
