@@ -19,7 +19,7 @@
         <td>{{ user.username }}</td>
         <td>{{ user.email }}</td>
         <td>{{ user.phoneNo }}</td>
-        <td>{{ user.roles }}</td>
+        <td>{{ getUserRole(user.roles) }}</td>
         <td>{{ user.warnings }}</td>
         <td class="action-buttons">
           <button class="warning-button" (click)="warningUser(user.id)">Warning</button>

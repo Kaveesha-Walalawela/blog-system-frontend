@@ -96,4 +96,15 @@ export class UsersComponent implements OnInit {
     );
   }
 
+  getUserRole(roles: string[]): string {
+    const roleMapping: { [key: string]: string } = {
+      ROLE_USER: 'USER',
+      ROLE_ADMIN: 'ADMIN'
+    };
+
+    const mappedRoles = roles.map(role => roleMapping[role] || role);
+
+    return mappedRoles.join(', ');
+  }
+
 }  
