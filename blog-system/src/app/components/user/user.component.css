@@ -1,4 +1,3 @@
-/* User Profile Component */
 .user-profile {
   margin-top: 20px;
   display: flex;
@@ -32,7 +31,7 @@
   font-weight: bold;
   color: #fffdfd;
   overflow: hidden;
-  margin-right: 20px; /* Added margin to push it slightly to the left */
+  margin-right: 20px; 
 }
 
 .letter-avatar {
@@ -178,7 +177,7 @@
   margin-top: 10px;
   border-radius: 4px;
   text-align: center;
-  width: 500px; /* Adjust the width to match the button */
+  width: 500px; 
 }
 
 .user-posts {
@@ -242,7 +241,7 @@
   text-align: center;
 }
 
-/* Responsive Styles */
+
 
 @media (max-width: 768px) {
   .avatar {
@@ -281,7 +280,7 @@
   }
 }
 
-/* CSS styles for post cards and buttons */
+
 .post-card {
   border: 1px solid #ccc;
   padding: 10px;
@@ -324,7 +323,7 @@
   background-color: #203558;
 }
 
-/* Remove duplicate styles for edit and delete buttons */
+
 .btn-edit,
 .btn-delete {
   background-color: #4267B2;
@@ -347,6 +346,6 @@
 }
 
 .nav-tabs .nav-link {
-  /* Existing styles */
+
   cursor: pointer;
 }

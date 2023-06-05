@@ -1,10 +1,10 @@
-/* Reset default margin and padding */
+
 * {
   margin: 0;
   padding: 0;
 }
 
-/* Center the container */
+
 .container {
   display: flex;
   justify-content: center;
@@ -12,13 +12,13 @@
   height: 100vh;
 }
 
-/* Set container width and add margin */
+
 .container {
   width: 80%;
   margin: 0 auto;
 }
 
-/* Set form width and add padding */
+
 form {
   width: 100%;
   padding: 40px;
@@ -27,7 +27,7 @@ form {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Center the heading */
+
 h3 {
   text-align: center;
   margin-top: 10px;
@@ -35,7 +35,7 @@ h3 {
   color: #333;
 }
 
-/* Style form labels */
+
 label {
   display: block;
   margin-bottom: 10px;
@@ -43,7 +43,7 @@ label {
   font-size: 16px;
 }
 
-/* Style form inputs */
+
 input {
   width: 100%;
   padding: 12px;
@@ -57,7 +57,7 @@ input:focus {
   border-color: #4CAF50;
 }
 
-/* Style submit button */
+
 button {
   display: block;
   width: 100%;
@@ -70,7 +70,7 @@ button {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* Style submit button on hover */
+
 button:hover {
   background-color: #45a049;
 }

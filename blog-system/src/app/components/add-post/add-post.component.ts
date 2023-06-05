@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PostService } from 'src/app/service/post.service';
-import { UserService } from 'src/app/service/user.service'; // Update the path to match your actual UserService location
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-add-post',
@@ -98,6 +98,3 @@ export class AddPostComponent implements OnInit {
     );
   }
 }
-
-
-  //

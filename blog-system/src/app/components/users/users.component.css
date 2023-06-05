@@ -10,7 +10,7 @@ td {
   border-bottom: 1px solid #ddd;
 }
 
-/* Style for the buttons */
+
 .action-buttons {
   display: flex;
   justify-content: flex-end;
@@ -40,14 +40,13 @@ td {
   color: white;
 }
 
-/* Hover styles for the buttons */
+
 .warning-button:hover,
 .delete-button:hover,
 .edit-button:hover {
   opacity: 0.8;
 }
 
-/* Add space between columns */
 .role,
 .warning-count {
   padding-right: 20px;

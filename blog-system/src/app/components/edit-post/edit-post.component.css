@@ -49,21 +49,19 @@
     background-color: #8d7dd9;
     cursor: pointer;
   }
-  
-  /* background color and font color for form elements */
+
   form {
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 5px;
     color: #271b3f;
   }
-  
-  /* change border color on focus for other form elements */
+
   form input:focus {
     border-color: #271b3f;
   }
   
-  /* background color and font color for container elements. */
+  
   body {
     background-color: #f2f2f2;
     color: #271b3f;

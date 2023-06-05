@@ -122,13 +122,13 @@ button.btn-search:hover {
 
 .text-center {
   margin-top: 20px; 
-  background-color: #271b3f; /* Set the background color to #271b3f */
-  color: white; /* Set the text color to white */
+  background-color: #271b3f;
+  color: white; 
   border-radius: 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   padding: 20px;
   margin-bottom: 20px;
-  max-height: 300px; /* Adjust the height as per your preference */
+  max-height: 300px; 
 }
 
 @keyframes slide-in {

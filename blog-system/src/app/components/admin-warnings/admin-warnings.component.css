@@ -2,20 +2,20 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between; /* New: Add space between sections */
+    justify-content: space-between;
   }
   
   .warning-more {
-    flex: 1 1 auto; /* New: Allow section to grow and shrink */
-    max-width: calc(50% - 10px); /* New: Limit section width to half minus gap */
-    padding-right: 10px; /* New: Add right padding */
-    border-right: 1px solid #ccc; /* New: Add right border */
+    flex: 1 1 auto;
+    max-width: calc(50% - 10px);
+    padding-right: 10px;
+    border-right: 1px solid #ccc;
   }
   
   .warning-less {
-    flex: 1 1 auto; /* New: Allow section to grow and shrink */
-    max-width: calc(50% - 10px); /* New: Limit section width to half minus gap */
-    padding-left: 10px; /* New: Add left padding */
+    flex: 1 1 auto; 
+    max-width: calc(50% - 10px); 
+    padding-left: 10px; 
   }
   
   .user-card {

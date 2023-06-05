@@ -32,6 +32,11 @@ export class AdminHomeComponent implements OnInit {
             post.status !== 'PENDING' &&
             post.status !== 'REJECTED'
         ); // Filter out draft posts
+        // Sort the posts by creation date in descending order
+      this.posts.sort((a: any, b: any) => {
+        return new Date(b.createdOn).getTime() - new Date(a.createdOn).getTime();
+      });
+
         this.filteredPosts = this.posts;
       },
       (error) => {

@@ -40,6 +40,8 @@ body {
 	font-weight: bold;
 	cursor: pointer;
 	transition: .5s ease-in-out;
+	margin-left: 100px;
+	margin-right: 100px;
   }
   
   input {

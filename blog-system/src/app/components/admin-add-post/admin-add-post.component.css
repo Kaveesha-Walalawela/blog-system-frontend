@@ -70,7 +70,6 @@
     cursor: pointer;
   }
   
-  /* background color and font color for form elements */
   form {
     background-color: #f2f2f2;
     padding: 20px;
@@ -78,12 +77,11 @@
     color: #f44336; 
   }
   
-  /* change border color on focus for other form elements */
+  /* change border color */
   form input:focus {
     border-color: #f44336; 
   }
-  
-  /* background color and font color for container elements. */
+
   body {
     background-color: #f2f2f2;
     color: #f44336; 
