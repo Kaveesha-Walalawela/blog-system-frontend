@@ -11,7 +11,7 @@
           <div *ngFor="let post of filteredPosts" class="card mb-3 bg-white text-black p-3">
             <p><span class="text-bold">Topic:</span> {{post.title}}</p>
             <p><span class="text-bold">Author:</span> {{post.username}}</p>
-            <p>{{post.content | slice: 0:1000}} <span><a [routerLink]="['/posts', post.id]" class="text">Read more...</a></span></p>
+            <p>{{post.content | slice: 0:1000}} <span><a [routerLink]="['/admin-posts', post.id]" class="text">Read more...</a></span></p>
             <div class="dropdown-container">
               <div class="dropdown">
                 <button class="dropdown-icon">&#58;</button>

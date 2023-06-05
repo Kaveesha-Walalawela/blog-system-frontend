@@ -31,6 +31,7 @@ import { AdminAddPostComponent } from './components/admin-add-post/admin-add-pos
 import { AdminWarningsComponent } from './components/admin-warnings/admin-warnings.component';
 import { UserWarningsComponent } from './components/user-warnings/user-warnings.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { AdminDetailsPostsComponent } from './components/admin-details-posts/admin-details-posts.component';
 
 
 @NgModule({
@@ -61,6 +62,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     AdminWarningsComponent,
     UserWarningsComponent,
     ResetPasswordComponent,
+    AdminDetailsPostsComponent,
   ],
   
   imports: [
