@@ -10,6 +10,7 @@ import { UsersService } from 'src/app/service/users.service';
 export class UsersComponent implements OnInit {
   users: any[] = [];
   warningCount: number = 0;
+  searchText: string = '';
 
   constructor(
     private router: Router,
@@ -105,6 +106,19 @@ export class UsersComponent implements OnInit {
     const mappedRoles = roles.map(role => roleMapping[role] || role);
 
     return mappedRoles.join(', ');
+  }
+
+  get filteredUsers() {
+    if (!this.searchText) {
+      return this.users;
+    }
+    const searchTextLower = this.searchText.toLowerCase();
+    return this.users.filter(
+      (user) =>
+        user.username.toLowerCase().includes(searchTextLower) ||
+        user.email.toLowerCase().includes(searchTextLower) ||
+        user.phoneNo.toLowerCase().includes(searchTextLower)
+    );
   }
 
 }  

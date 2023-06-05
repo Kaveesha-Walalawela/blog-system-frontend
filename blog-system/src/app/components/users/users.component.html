@@ -1,4 +1,5 @@
 <app-admin-header></app-admin-header>
+<input type="text" placeholder="Search..." [(ngModel)]="searchText" />
 <table>
     <thead>
       <tr>
@@ -13,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let user of users; let i = index">
+      <tr *ngFor="let user of filteredUsers; let i = index">
         <td>{{ i + 1 }}</td>
         <!-- <td>{{ user.id }}</td> -->
         <td>{{ user.username }}</td>
